@@ -34,6 +34,19 @@ nav a:hover {
     background-color: black;
 }
 
+.navbar-nav {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar-toggler {
+    border-color: white; /* Cambia el borde del botón a blanco */
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Invierte los colores, haciendo el ícono blanco */
+}
+
 .dropdown-menu {
     background-color: white;
 }
@@ -140,6 +153,7 @@ main {
 /*button:hover {
     background-color: black;
 }*/
+
 .btn-primary:hover {
     background-color: black;
 }

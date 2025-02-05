@@ -1,17 +1,5 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-.container {
-    margin-bottom: 20px;
+main {
+    margin-top: 20px; 
 }
 
 form {
@@ -66,7 +54,7 @@ button:hover {
     border: 1px solid #ccc;
     border-radius: 4px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
 }
 
@@ -105,11 +93,15 @@ p {
 
 @media print {
     .container, #printButton {
-        display: none; /* Ocultar formulario y botón al imprimir */
+        display: none; 
     }
 
     .caratula {
-        display: block; /* Mostrar la carátula al imprimir */
+        display: block; 
+    }
+    
+    header, nav, .navbar-toggler, #printButton {
+        display: none !important;
     }
 }
 
