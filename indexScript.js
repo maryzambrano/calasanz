@@ -51,15 +51,20 @@ const events = [
     { date: "2025-05-23", type: "evaluaciones", description: "Quiz (Unidad II)" }
 ];
 
+
+
 const currentMonthYear = document.getElementById("currentMonthYear");
 const calendarGrid = document.getElementById("calendarGrid");
 const prevMonth = document.getElementById("prevMonth");
 const nextMonth = document.getElementById("nextMonth");
 const filterType = document.getElementById("filterType");
+const eventDescription = document.getElementById("eventDescription");
 let filteredType = "all";
 
 function renderCalendar(month, year) {
     calendarGrid.innerHTML = "";
+    eventDescription.style.display = "none"; // Ocultar descripción al cambiar de mes
+
     const monthNames = [
         "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
         "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
@@ -79,18 +84,25 @@ function renderCalendar(month, year) {
         day.classList.add("calendar-date");
         const dateString = `${year}-${String(month + 1).padStart(2, "0")}-${String(i).padStart(2, "0")}`;
         const event = events.find(event => event.date === dateString);
+        
+        day.textContent = i;
+        
         if (event && (filteredType === "all" || event.type === filteredType)) {
             day.classList.add(`event-${event.type}`);
             day.title = event.description;
+
+            // Evento para móviles
+            day.addEventListener("click", () => {
+                eventDescription.textContent = `📅 ${event.description}`;
+                eventDescription.style.display = "block";
+            });
         }
-        day.textContent = i;
+
         calendarGrid.appendChild(day);
     }
-    
-    // Deshabilitar botones si se llega a los límites
+
     prevMonth.disabled = (currentMonth === 0);
     nextMonth.disabled = (currentMonth === 11);
-
     prevMonth.style.backgroundColor = prevMonth.disabled ? "#d3d3d3" : "";
     nextMonth.style.backgroundColor = nextMonth.disabled ? "#d3d3d3" : "";
 }
@@ -115,5 +127,3 @@ filterType.addEventListener("change", (e) => {
 });
 
 renderCalendar(currentMonth, currentYear);
-
-
