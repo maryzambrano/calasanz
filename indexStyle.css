@@ -130,17 +130,17 @@ main {
 }
 
 .calendar-date.event-efemerides {
-    background-color: #ffc107;
+    background-color: #f1ce08;
     color: black;
 }
 
 .calendar-date.event-evaluaciones {
-    background-color: #28a745;
+    background-color: #556B2F;
     color: white;
 }
 
 .calendar-date.event-otros {
-    background-color: #17a2b8;
+    background-color: #000080;
     color: white;
 }
 
@@ -162,7 +162,7 @@ main {
     background-color: #f0f0f0;
 }
 
-#caratula, #cartelera {
+#caratula, #cartelera, #temas {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -186,6 +186,9 @@ main {
     /*display: inline-block;*/
     margin: 10px;
     text-align: center;
+}
+#temas a{
+    color: black;
 }
 
 footer {
