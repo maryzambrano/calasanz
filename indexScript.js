@@ -45,10 +45,9 @@ const events = [
     { date: "2025-08-01", type: "otros", description: "Receso invernal" },
     { date: "2025-08-15", type: "otros", description: "Turístico" },
     { date: "2025-11-21", type: "otros", description: "Turístico" },
-    { date: "2025-12-19", type: "otros", description: "Finaliza el Ciclo lectivo 2025" },
+    { date: "2025-12-19", type: "otros", description: "Finaliza el Ciclo lectivo 2025" }
     //Evaluaciones
-    { date: "2025-01-25", type: "evaluaciones", description: "Quiz (Unidad I)" },
-    { date: "2025-05-23", type: "evaluaciones", description: "Quiz (Unidad II)" }
+    
 ];
 
 
