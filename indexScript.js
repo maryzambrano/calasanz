@@ -6,7 +6,7 @@ const events = [
     { date: "2025-01-01", type: "efemerides", description: "Año nuevo" },
     { date: "2025-03-03", type: "efemerides", description: "Carnaval" },
     { date: "2025-03-04", type: "efemerides", description: "Carnaval" },
-    { date: "2025-03-05", type: "efemerides", description: "Miércoles de Cenizas" },
+    { date: "2025-03-05", type: "efemerides", description: "Miércoles de Cenizas, Inicio de clases secundaria" },
     { date: "2025-03-24", type: "efemerides", description: "Día Nacional de la Memoria por la Verdad y la Justicia" },
     { date: "2025-04-02", type: "efemerides", description: "Día del Veterano y de los Caídos en la Guerra de Malvinas" },
     { date: "2025-04-13", type: "efemerides", description: "Domingo de Ramos" },
