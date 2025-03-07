@@ -187,8 +187,15 @@ main {
     margin: 10px;
     text-align: center;
 }
-#temas a{
+.listaTema a {
     color: black;
+    
+}
+
+.listaTema li {
+    list-style-type: none;
+
+
 }
 
 footer {
