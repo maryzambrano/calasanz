@@ -149,6 +149,9 @@ main {
     border-color:#800000; 
     color: #ffffff; 
 }
+.enlace {
+    color:black
+}
 
 /*button:hover {
     background-color: black;
