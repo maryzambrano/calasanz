@@ -201,6 +201,26 @@ main {
 
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+.video-ajustado {
+    width: 60%; /* El video ocupará el 50% del ancho del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    display: block; /* Asegura que el video esté alineado correctamente */
+    margin: 0 auto; /* Centra el video horizontalmente */
+}
+
+
+
 footer {
     background-color: #800000;
     color: white;
