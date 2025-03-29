@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crucigrama Interactivo</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .contenedor-crucigrama {
+            display: grid;
+            grid-template-columns: auto repeat(14, 40px); /* Etiquetas de filas + 14 columnas */
+            grid-template-rows: auto repeat(14, 40px); /* Etiquetas de columnas + 14 filas */
+            grid-gap: 5px;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+        .etiqueta-fila, .etiqueta-columna {
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            color: #333;
+        }
+        .casilla {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border: 1px solid #333;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 18px;
+        }
+        .casilla.bloqueada {
+            background-color: grey;
+        }
+
+        .pistas {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+        }
+        .boton-verificar {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .mensaje {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .contenedor-crucigrama {
+                grid-template-columns: auto repeat(14, 25px); /* Etiquetas de filas + columnas más pequeñas */
+                grid-template-rows: auto repeat(14, 25px); /* Etiquetas de columnas + filas más pequeñas */
+                grid-gap: 2px;
+            }
+            .casilla {
+                width: 25px;
+                height: 25px;
+                font-size: 12px;
+            }
+            .etiqueta-fila, .etiqueta-columna {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Crucigrama Interactivo</h1>
+    <div class="contenedor-crucigrama">
+        <!-- Etiquetas de columnas -->
+        <div></div> <!-- Espacio vacío en la esquina superior izquierda -->
+        <div class="etiqueta-columna">A</div>
+        <div class="etiqueta-columna">B</div>
+        <div class="etiqueta-columna">C</div>
+        <div class="etiqueta-columna">D</div>
+        <div class="etiqueta-columna">E</div>
+        <div class="etiqueta-columna">F</div>
+        <div class="etiqueta-columna">G</div>
+        <div class="etiqueta-columna">H</div>
+        <div class="etiqueta-columna">I</div>
+        <div class="etiqueta-columna">J</div>
+        <div class="etiqueta-columna">K</div>
+        <div class="etiqueta-columna">L</div>
+        <div class="etiqueta-columna">M</div>
+        <div class="etiqueta-columna">N</div>
+        
+        <!-- Etiquetas de filas + Crucigrama -->
+        <!-- Fila 1 -->
+        <div class="etiqueta-fila">1</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="B">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="A">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="B">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="B">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="A">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="G">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="E">
+
+        <!-- Fila 2 -->
+        <div class="etiqueta-fila">2</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="H">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="O">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="L">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="L">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="E">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="R">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="I">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="T">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="H">
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+
+        <!-- Fila 3 -->
+        <div class="etiqueta-fila">3</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="K">
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+
+        <!-- Fila 4 -->
+        <div class="etiqueta-fila">4</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="U">
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="E">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="N">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="I">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="A">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="C">
+        <div class="casilla bloqueada"></div>
+        
+        <!-- Fila 5 -->
+        <div class="etiqueta-fila">5</div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="V">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="O">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="N">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="N">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="E">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="W">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="M">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="A">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="N">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="N">
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="P">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="O">
+        <div class="casilla bloqueada"></div>
+        
+        <!-- Fila 6 -->
+        <div class="etiqueta-fila">6</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="I">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="B">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="M">
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="A">
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="P">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="N">
+        <div class="casilla bloqueada"></div>
+        
+        <!-- Fila 7 -->
+        <div class="etiqueta-fila">7</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="V">
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="R">
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="L">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="T">
+        <div class="casilla bloqueada"></div>
+        
+        <!-- Fila 8 -->
+        <div class="etiqueta-fila">8</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="A">
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="E">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="C">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="K">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="E">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="R">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="T">
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="E">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="R">
+        <div class="casilla bloqueada"></div>
+
+        <!-- Fila 9 -->
+        <div class="etiqueta-fila">9</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="C">
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="R">
+        <input type="text" class="casilla" maxlength="1" data-respuesta="I">
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="O">
+        <div class="casilla bloqueada"></div>
+        
+        <!-- Fila 10 -->
+        <div class="etiqueta-fila">10</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="A">
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="L">
+        <div class="casilla bloqueada"></div>
+
+        <!-- Fila 11 -->
+        <div class="etiqueta-fila">11</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="Y">
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="D">
+        <div class="casilla bloqueada"></div>
+
+        <!-- Fila 12 -->
+        <div class="etiqueta-fila">12</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="A">
+        <div class="casilla bloqueada"></div>
+        
+        <!-- Fila 13 -->
+        <div class="etiqueta-fila">13</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="T">
+        <div class="casilla bloqueada"></div>
+
+        <!-- Fila 14 -->
+        <div class="etiqueta-fila">14</div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <div class="casilla bloqueada"></div>
+        <input type="text" class="casilla" maxlength="1" data-respuesta="A">
+        <div class="casilla bloqueada"></div>
+
+    </div>
+    <div class="pistas">
+        <h2>Horizontales:</h2>
+        <p>H1. Profesor de la Universidad de Cambridge que diseñó, en 1822, una máquina que permitía calcular tablas matemáticas, llamada máquina de diferencias.</p>
+        <p>C2. Inventó las máquinas calculadoras de tarjetas perforadas.</p>
+        <p>I4. Primera máquina de bulbos que fue desarrollada entre 1942 y 1946 en la Universidad de Pensilvania.</p>
+        <p>A5. Aportó el concepto de programa almacenado, transformando las calculadoras electrónicas en verdaderas computadoras.</p>
+        <p>C6. Una de las cinco compañías de computadoras más grandes del siglo, cuyas siglas significan International Bussines Machines.</p>
+        <p>E8. Desarrolló con varios asociados la primera máquina de bulbos entre 1942 y 1946 en la Universidad de Pensilvania.</p>
+        <h2>Verticales:</h2>
+        <p>C4. Primera computadora con procesamiento de datos completamente automático, construida en 1951 por la compañía Sperry Rand.</p>
+        <p>F8. Supercomputadora de cuarta generación que permitía atender varios cientos de millones de operaciones por segundo.</p>
+        <p>G5. Una de las primeras calculadoras automáticas que utilizaba relevadores y estaba controlada por una cinta de papel perforada.</p>
+        <p>I1. Profesor de la Universidad de Harvard que utilizó los principios de Babbage y de Hollerith para construir un mecanismo automático de cálculo.</p>
+        <p>L4. Compañía formada por Steve Wozniak y Steve Jobs para comercializar microcomputadoras de uso masivo.</p>
+        <p>M4. Introdujo la serie 6000 con la computadora 6600, en 1964, que se consideró como la más rápida de su época.</p>
+    </div>
+    <button class="boton-verificar" onclick="verificarRespuestas()">Verificar Respuestas</button>
+    <div id="mensaje" class="mensaje"></div>
+    <script>
+        function verificarRespuestas() {
+            const casillas = document.querySelectorAll('.casilla');
+            let correctas = 0;
+            let totalCasillas = 0;
+
+            casillas.forEach(casilla => {
+                const respuesta = casilla.getAttribute('data-respuesta');
+                if (respuesta && casilla.value.toUpperCase() === respuesta) {
+                    casilla.style.backgroundColor = '#b2f7b2'; // Verde claro
+                    correctas++;
+                } else if (respuesta) {
+                    casilla.style.backgroundColor = '#f7b2b2'; // Rojo claro
+                }
+                if (respuesta) totalCasillas++;
+            });
+
+            const mensajeDiv = document.getElementById('mensaje');
+            if (correctas === totalCasillas) {
+                mensajeDiv.textContent = '¡Felicitaciones! Has completado el crucigrama correctamente.';
+                mensajeDiv.style.color = 'green';
+            } else {
+                mensajeDiv.textContent = 'Algunas respuestas no son correctas. Por favor, revisa nuevamente las pistas.';
+                mensajeDiv.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
