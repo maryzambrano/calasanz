@@ -1,0 +1,109 @@
+/* Estilos generales para el cuerpo del documento */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: rgb(192, 188, 188);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Encabezado con fondo negro y texto blanco */
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* Menú de navegación horizontal */
+nav {
+    background-color: red;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Estilos para los enlaces del menú */
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Contenedor principal: contenido y aside */
+main {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+strong {
+    color: red;
+}
+
+blockquote{
+    font-style: italic; 
+    color: red;
+}
+
+/* Sección de contenido principal */
+section {
+    flex: 3;
+}
+
+/* Tarjetas para cada bloque temático */
+article {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+/* Barra lateral con datos curiosos */
+aside {
+    flex: 1;
+    background-color: white;
+    padding: 1rem;
+    border-left: 4px solid red;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(192, 188, 188);
+}
+
+img {
+    max-width: 100%;
+    margin-top: 1rem;
+    border: 4px solid #f44336;
+    border-radius: 8px;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #ffe0b2;
+    text-decoration: none;
+}
+
