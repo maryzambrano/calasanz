@@ -153,6 +153,11 @@ main {
     color:black
 }
 
+.actividad {
+      background-color: #cac9c9;
+      padding: 10px;
+      border-left: 4px solid  #800000;
+    }
 /*button:hover {
     background-color: black;
 }*/
