@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informática 2°</title>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../indexStyle.css">
+</head>
+<body>
+    <header>
+        <img src="../imgs/CICLO ESCOLAR 2025.png">  
+    </header>
+    <!--BARRA DE NAVEGACIÓN-->
+    <nav class="navbar navbar-expand-lg bg-body-primary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html"><i class="bi bi-house-fill"></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" 
+                            href="#" role="button" 
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">
+                            Informática
+                        </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Temas1.html">1° Año</a></li>
+                        <li><a class="dropdown-item" href="#">2° Año</a></li>
+                        <li><a class="dropdown-item" href="../Temas3.html">3° Año</a></li>
+                    </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../1ero/materiales.pdf" target="_blank">Materiales</a>
+                    </li>
+                    
+                    
+                    
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding: 20px;">
+        <h2>¿Qué es S4A?</h2>
+    
+    <p> Scratch for Arduino, es una versión modificada del lenguaje de programación visual Scratch, diseñada para interactuar con la placa Arduino. Permite a los usuarios controlar componentes electrónicos conectados a Arduino, como sensores y actuadores, mediante bloques de código visuales similares a los de Scratch, facilitando el aprendizaje de la programación y la electrónica. </p>
+    <h3>Principales características de S4A:</h3>
+    <ul>
+        <li>Interfaz gráfica tipo Scratch: S4A utiliza una interfaz visual basada en bloques, similar a la de Scratch, lo que facilita la programación para principiantes.</li>
+        <li>Programación de Arduino: Permite controlar los pines de entrada y salida de la placa Arduino, así como sus sensores y actuadores.</li>
+        <li>Bloques específicos para Arduino: S4A incluye bloques especializados para interactuar con la placa Arduino, como lectura y escritura de pines digitales y analógicos, control de motores, etc. </li> 
+        <li>Conexión con la placa Arduino: S4A se conecta a la placa Arduino a través de un cable USB, permitiendo la comunicación entre el ordenador y la placa.</li>
+        <li>Panel de sensores: S4A cuenta con un panel de sensores que muestra el estado de las conexiones de la placa Arduino. </li>
+        <li>Facilita la creación de proyectos: S4A permite crear proyectos interactivos que involucran tanto la programación como la electrónica. </li>
+        <li>Entorno educativo: S4A es una herramienta muy utilizada en educación para enseñar conceptos de programación y electrónica de forma divertida y práctica. </li>
+    </ul>
+    <h3>Instalación de S4A:</h3>
+    <ol>
+        <li>Abrir la página <a href="http://s4a.cat/index_es.html" class="enlace" target="_blank">http://s4a.cat/index_es.html</a></li>
+        <li>Hacer cic en el enlace <strong>Windows</strong>:</li>
+        <img src="../imgs/instalarS4A.png" class="img-fluid mx-auto">
+        <li>Observarás en la carpeta de descargas el archivo <img src="../imgs/descomprimirS4A.png" class="img-fluid mx-auto">. Haz clic derecho sobre el ícono y selecciona <strong>Extraer todo...</strong>.Luego, aparece un cuadro de diálogo para indicar la ubicación de la carpeta de extracción, pulsa el botón <strong>Extraer</strong>.</li>
+        <li>Abrir el icono de la aplicación <img src="../imgs/s4a.png" class="img-fluid mx-auto">. Pulsar <strong>Si</strong> para permitir la instalación, luego seleccionar el idioma Español y seguir los pasos del instalador.</li>
+        
+        <p>Una vez abierto el programa, puedes conectar tu placa Arduino UNO y comenzar a armar y programar tus circuitos.</p>
+
+    </ol>
+    <h3>Ejercicio 1: Blink LED en S4A</h3>
+    <p>Programa en S4A un LED que parpadee cada 1 segundo utilizando el pin digital 13 de la placa Arduino UNO. En el escenario, utiliza dos disfraces para representar el estado del LED: encendido y apagado, de manera que el cambio se muestre en pantalla al mismo tiempo que en la placa.</p>
+    <img src="../imgs/S4A_1.png" class="img-fluid mx-auto">
+    <h3>Actividad:</h3>
+    <p>Dentro de la carpeta <strong>S4A</strong> que creaste en la actividad anterior, crear un documento de Google con las respuestas a las siguientes consignas:</p>
+        <ol>
+            <li>¿Qué es S4A?</li>
+            <li>Describir los principales elementos de la interfaz de S4A (con imagen).</li>
+            <li>¿Qué pines de la placa Arduino UNO utiliza S4A como entradas y salidas? Explica para qué sirve cada tipo de conexión (puedes identificar los pines en una imagen de a placa).</li>
+        </ol>
+    <p>Recuerda colocar en el encabezado del documento Curso e integrantes; también colocar las fuentes de consulta al final. Fecha limite de entrega: cuarta semana de agosto.</p>
+    <strong>Importante: Este trabajo será considerado en la evaluación individual de la segunda semana de septiembre.</strong>
+</p>
+        
+    </main>
+
+    <footer>
+        <p>Esta página está diseñada con fines informativos, cualquier comunicación debe realizarse a través de los medios establecidos por el <a href="https://colegiocalasanz.edu.ar/" target="_blank">Colegio Calasanz</a></p>
+    </footer>
+
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>
