@@ -189,6 +189,33 @@ document.getElementById("salida").innerHTML = "Texto en la página";
         <h4>Operadores en JS</h4>
         <img src="../imgs/JSTipodeDatos.png" class="img-fluid mx-auto">
         <br><br>
+        <h4>Ejemplo: Cambiar el texto de un párrafo al hacer clic en un botón.</h4>
+        <p>Para realizar el código de este ejemplo es importante que tengas en cuenta que cuando abrimos una página web, el navegador crea un árbol de objetos llamado DOM (Document Object Model). Ese árbol tiene etiquetas (&lt;h1&gt;, &lt;p&gt;, &lt;div&gt;, etc.) y todo lo que aparece en el HTML.  Podemos acceder y manipular ese árbol a través del objeto document. Con document podemos:</p>
+            <ol>
+                <li>Buscar elementos de la página → document.getElementById("titulo");</li>
+                <li>Cambiar el contenido → document.getElementById("titulo").innerHTML = "Nuevo título";</li>
+                <li>Modificar estilos → document.body.style.backgroundColor = "lightblue";</li>
+                <li>Crear elementos nuevos →</li>
+                <pre style="background-color: white; padding: 10px; border-radius: 5px;"><code>
+let nuevo = document.createElement("p");
+nuevo.textContent = "Soy un párrafo nuevo";
+document.body.appendChild(nuevo);
+</code></pre>
+            </ol>
+            <p>Colocaremos el atributo id para identificar los elementos de la página, de manera que el HTML quedaría así:</p>
+            <pre style="background-color: white; padding: 10px; border-radius: 5px;"><code>&lt;h1&gt;Ejercicio: Modificar texto al presionar un botón&lt;/h1&gt;
+&lt;p id="texto"&gt;Texto original&lt;/p&gt;
+&lt;button id="btntexto"&gt;Haz clic&lt;/button&gt;
+</code></pre>            
+            <p>Mientras que en el JS crearemos una variable para buscar el botón en la página:</p>
+            <pre style="background-color: white; padding: 10px; border-radius: 5px;"><code>
+let boton = document.getElementById("btntexto"); 
+boton.addEventListener("click", function() {
+    document.getElementById("texto").innerHTML = "Texto modificado";
+    });
+            </code></pre>
+            <p>Con addEventListener agregamos el evento clic, de manera que cuando el usuario haga clic en el botón, se ejecutará la función contenida entre las llaves, la cual consiste en buscar el párrafo y modificar su contenido.</p>
+            
         <h4>Ejercicios:</h4>
             <ol>
                 <li>Crear un contador que se incremente cada vez que el usuario haga clic en un botón.</li>
