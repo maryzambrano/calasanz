@@ -189,9 +189,15 @@ document.getElementById("salida").innerHTML = "Texto en la página";
         <h4>Operadores en JS</h4>
         <img src="../imgs/JSTipodeDatos.png" class="img-fluid mx-auto">
         <br><br>
-        <h4>Ejemplo: Cambiar el texto de un párrafo al hacer clic en un botón.</h4>
-        <p>Para realizar el código de este ejemplo es importante que tengas en cuenta que cuando abrimos una página web, el navegador crea un árbol de objetos llamado DOM (Document Object Model). Ese árbol tiene etiquetas (&lt;h1&gt;, &lt;p&gt;, &lt;div&gt;, etc.) y todo lo que aparece en el HTML.  Podemos acceder y manipular ese árbol a través del objeto document. Con document podemos:</p>
-            <ol>
+
+        <h4>El Modelo de Objetos del Documento (DOM) en JS:</h4>
+        <p>Es una interfaz que representa un documento HTML como una estructura en forma de árbol, permitiendo a JavaScript modificar dinámicamente el contenido, el estilo y la estructura de una página web en tiempo real. Actúa como un puente entre el código de la página y el programa JavaScript, transformando los elementos HTML en objetos que el lenguaje puede manipular, creando así una experiencia de usuario más interactiva y atractiva.</p> 
+        <h5>¿Cómo funciona?</h5>
+        <ol>
+            <li><strong>Creación del DOM:</strong> Cuando un navegador carga una página web, crea el DOM, que es una representación orientada a objetos de los elementos HTML.</li>
+            <li><strong>Estructura de árbol:</strong> El DOM organiza la página web como un árbol jerárquico, donde cada elemento, texto o comentario se representa como un nodo. </li>
+            <li><strong>Manipulación con JavaScript:</strong> JavaScript interactúa con estos nodos utilizando sus propiedades y métodos para:</li>
+            <ul>
                 <li>Buscar elementos de la página → document.getElementById("titulo");</li>
                 <li>Cambiar el contenido → document.getElementById("titulo").innerHTML = "Nuevo título";</li>
                 <li>Modificar estilos → document.body.style.backgroundColor = "lightblue";</li>
@@ -201,20 +207,24 @@ let nuevo = document.createElement("p");
 nuevo.textContent = "Soy un párrafo nuevo";
 document.body.appendChild(nuevo);
 </code></pre>
-            </ol>
-            <p>Colocaremos el atributo id para identificar los elementos de la página, de manera que el HTML quedaría así:</p>
-            <pre style="background-color: white; padding: 10px; border-radius: 5px;"><code>&lt;h1&gt;Ejercicio: Modificar texto al presionar un botón&lt;/h1&gt;
+            </ul>
+        </ol>
+        <h5>Ejemplo: Cambiar el texto de un párrafo al hacer clic en un botón.</h5>
+        <p>En el HTML colocaremos el atributo <strong>id</strong> para identificar los elementos de la página:</p>
+        <pre style="background-color: white; padding: 10px; border-radius: 5px;"><code>&lt;h1&gt;Ejercicio: Modificar texto al presionar un botón&lt;/h1&gt;
 &lt;p id="texto"&gt;Texto original&lt;/p&gt;
 &lt;button id="btntexto"&gt;Haz clic&lt;/button&gt;
-</code></pre>            
-            <p>Mientras que en el JS crearemos una variable para buscar el botón en la página:</p>
-            <pre style="background-color: white; padding: 10px; border-radius: 5px;"><code>
-let boton = document.getElementById("btntexto"); 
+        </code></pre>            
+        <p>En el JS crearemos dos variables para buscar el botón y el párrafo de la página:</p>
+        <pre style="background-color: white; padding: 10px; border-radius: 5px;"><code>
+let boton = document.getElementById("btntexto");
+let parrafo = document.getElementById("texto");
+
 boton.addEventListener("click", function() {
-    document.getElementById("texto").innerHTML = "Texto modificado";
-    });
+    parrafo.innerHTML = "Texto modificado";
+});
             </code></pre>
-            <p>Con addEventListener agregamos el evento clic, de manera que cuando el usuario haga clic en el botón, se ejecutará la función contenida entre las llaves, la cual consiste en buscar el párrafo y modificar su contenido.</p>
+            <p>Con <strong>addEventListener</strong> agregamos el evento clic, de manera que cuando el usuario haga clic en el botón, se ejecutará la función contenida entre las llaves, que consiste en modificar el contenido del parrafo.</p>
             
         <h4>Ejercicios:</h4>
             <ol>
