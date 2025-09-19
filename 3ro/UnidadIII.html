@@ -202,21 +202,21 @@ document.getElementById("salida").innerHTML = "Texto en la página";
                 <li>Cambiar el contenido → document.getElementById("titulo").innerHTML = "Nuevo título";</li>
                 <li>Modificar estilos → document.body.style.backgroundColor = "lightblue";</li>
                 <li>Crear elementos nuevos →</li>
-                <pre style="background-color: white; padding: 10px; border-radius: 5px;"><code>
+                <pre><code>
 let nuevo = document.createElement("p");
 nuevo.textContent = "Soy un párrafo nuevo";
 document.body.appendChild(nuevo);
 </code></pre>
             </ul>
         </ol>
-        <h5>Ejemplo: Cambiar el texto de un párrafo al hacer clic en un botón.</h5>
+        <h5>Ejemplo 1: Cambiar el texto de un párrafo al hacer clic en un botón.</h5>
         <p>En el HTML colocaremos el atributo <strong>id</strong> para identificar los elementos de la página:</p>
-        <pre style="background-color: white; padding: 10px; border-radius: 5px;"><code>&lt;h1&gt;Ejercicio: Modificar texto al presionar un botón&lt;/h1&gt;
+        <pre><code>&lt;h1&gt;Ejercicio: Modificar texto al presionar un botón&lt;/h1&gt;
 &lt;p id="texto"&gt;Texto original&lt;/p&gt;
 &lt;button id="btntexto"&gt;Haz clic&lt;/button&gt;
         </code></pre>            
         <p>En el JS crearemos dos variables para buscar el botón y el párrafo de la página:</p>
-        <pre style="background-color: white; padding: 10px; border-radius: 5px;"><code>
+        <pre><code>
 let boton = document.getElementById("btntexto");
 let parrafo = document.getElementById("texto");
 
@@ -226,15 +226,46 @@ boton.addEventListener("click", function() {
             </code></pre>
             <p>Con <strong>addEventListener</strong> agregamos el evento clic, de manera que cuando el usuario haga clic en el botón, se ejecutará la función contenida entre las llaves, que consiste en modificar el contenido del parrafo.</p>
             
+            <h5>Ejemplo 2: Crear un contador que se incremente cada vez que el usuario haga clic en un botón.</h5>
+        <p>En el HTML crearemos un elemento <strong>span</strong> con su respectivo <strong>id</strong>, para ser modificado posteriormente en el JS:</p>
+        <pre><code>&lt;h1&gt;Ejercicio: Contador ascendente&lt;/h1&gt;
+&lt;p&gt;Contador = &lt;span id="conteo"&gt; 0 &lt;/span&gt;
+&lt;button id="btnsubir"&gt;Subir&lt;/button&gt;
+        </code></pre>            
+        <p>En el JS crearemos la variable <strong>contador</strong> que almacenará las veces que cliqueamos el botón <strong>Subir</strong>:</p>
+        <pre><code>
+let contador = 0;
+let boton = document.getElementById("btnsubir");
+let numero = document.getElementById("conteo");
+
+boton.addEventListener("click", function(){
+    contador++;
+    numero.textContent = contador;
+});
+            </code></pre>
+           <p>La función <strong>textContent</strong> sirve para obtener o establecer el contenido de texto de un elemento HTML.</p> 
+
+<h5>Ejemplo 3: Cambiar el color de fondo de la página cuando el usuario haga clic en un botón.</h5>
+<p>HTML:</p>
+        <pre><code>&lt;h1&gt;Ejercicio: Modificar fondo al presionar un botón&lt;/h1&gt;
+&lt;button id="btnCambiarFondo"&gt;Cambiar Fondo&lt;/button&gt;
+        </code></pre>            
+        <p>JS:</p>
+        <pre><code>
+const boton = document.getElementById('btnCambiarFondo');
+boton.addEventListener('click', function() {
+    document.body.style.backgroundColor = 'lightblue';
+});
+            </code></pre>
+
         <h4>Ejercicios:</h4>
             <ol>
-                <li>Crear un contador que se incremente cada vez que el usuario haga clic en un botón.</li>
                 <li>Crear un contador que disminuya en 1 cada vez que se haga clic en un botón, empezando desde 10.</li>
-                <li>Cambiar el color de fondo de la página cada vez que el usuario haga clic en un botón.</li>
-                <li>Crear un botón que permita mostrar u ocultar un texto en la página.</li>
+                <li>Establecer 3 botones que permitan cambiar el color de fondo y del texto en distitos colores según el botón que se presione.</li>
+                <!--<li>Crear un botón que permita mostrar u ocultar un texto en la página.</li>
                 <li>Cambiar el texto de un botón al hacer clic en él.</li>
                 <li>Sumar dos números cuando el usuario hace clic en un botón.</li>
-                <li>Crear un contador que aumente su valor automáticamente cada segundo, hasta un máximo de 10.</li>
+                <li>Crear un contador que aumente su valor automáticamente cada segundo, hasta un máximo de 10.</li>-->
             </ol>       
     </main>
 
