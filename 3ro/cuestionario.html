@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Actividad: Tabla de funciones JS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .contenedor {
+      display: flex;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    table {
+      flex: 2;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #e0e7ff;
+    }
+    .dropzone {
+      min-height: 60px;
+      background: #eef;
+      padding: 8px;
+      border-radius: 6px;
+    }
+    .respuestas {
+      flex: 1;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      height: fit-content;
+    }
+    .respuesta {
+      background: #fff;
+      border: 1px solid #999;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 6px;
+      cursor: grab;
+    }
+    .respuesta:hover {
+      background: #e0f7fa;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 20px;
+      background: #4f46e5;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    button:hover {
+      background: #4338ca;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🧠 Arrastrá la definición correcta</h1>
+
+<div class="contenedor">
+  <table>
+    <tr>
+      <th>Función / Método</th>
+      <th>¿Para qué sirve?</th>
+    </tr>
+    <tr>
+      <td>document.getElementById()</td>
+      <td><div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="Buscar un elemento HTML por su id"></div></td>
+    </tr>
+    <tr>
+      <td>addEventListener()</td>
+      <td><div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="Asociar un evento a un elemento"></div></td>
+    </tr>
+    <tr>
+      <td>prompt()</td>
+      <td><div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="Solicitar un dato al usuario"></div></td>
+    </tr>
+    <tr>
+      <td>alert()</td>
+      <td><div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="Mostrar un mensaje emergente"></div></td>
+    </tr>
+    <tr>
+      <td>Number()</td>
+      <td><div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="Convertir texto en número"></div></td>
+    </tr>
+    <tr>
+      <td>innerHTML</td>
+      <td><div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="Modificar el contenido HTML de un elemento"></div></td>
+    </tr>
+    <tr>
+      <td>style.property</td>
+      <td><div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="Cambiar estilos CSS desde JavaScript"></div></td>
+    </tr>
+    <tr>
+      <td>onclick</td>
+      <td><div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="Ejecutar una función al hacer clic en un elemento"></div></td>
+    </tr>
+    <tr>
+      <td>isNaN()</td>
+      <td><div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="Verificar si un valor no es un número válido"></div></td>
+    </tr>
+    <tr>
+      <td>querySelector()</td>
+      <td><div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="Seleccionar el primer elemento que coincide con un selector CSS"></div></td>
+    </tr>
+    <tr>
+      <td>return</td>
+      <td><div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" data-correct="Detener la ejecución de una función en ese punto"></div></td>
+    </tr>
+  </table>
+
+  <div class="respuestas">
+    <h3>📌 Definiciones disponibles:</h3>
+    <div class="respuesta" draggable="true" ondragstart="drag(event)" id="r1">Mostrar un mensaje emergente</div>
+    <div class="respuesta" draggable="true" ondragstart="drag(event)" id="r2">Convertir texto en número</div>
+    <div class="respuesta" draggable="true" ondragstart="drag(event)" id="r3">Solicitar un dato al usuario</div>
+    <div class="respuesta" draggable="true" ondragstart="drag(event)" id="r4">Buscar un elemento HTML por su id</div>
+    <div class="respuesta" draggable="true" ondragstart="drag(event)" id="r5">Asociar un evento a un elemento</div>
+    <div class="respuesta" draggable="true" ondragstart="drag(event)" id="r6">Modificar el contenido HTML de un elemento</div>
+    <div class="respuesta" draggable="true" ondragstart="drag(event)" id="r7">Cambiar estilos CSS desde JavaScript</div>
+    <div class="respuesta" draggable="true" ondragstart="drag(event)" id="r8">Ejecutar una función al hacer clic en un elemento</div>
+    <div class="respuesta" draggable="true" ondragstart="drag(event)" id="r9">Verificar si un valor no es un número válido</div>
+    <div class="respuesta" draggable="true" ondragstart="drag(event)" id="r10">Seleccionar el primer elemento que coincide con un selector CSS</div>
+    <div class="respuesta" draggable="true" ondragstart="drag(event)" id="r11">Detener la ejecución de una función en ese punto</div>
+  </div>
+</div>
+
+<button onclick="evaluar()">Enviar respuestas</button>
+
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  const dragged = document.getElementById(data);
+  ev.target.innerHTML = "";
+  ev.target.appendChild(dragged);
+}
+
+function evaluar() {
+  const zonas = document.querySelectorAll(".dropzone");
+  let correctas = 0;
+  let incorrectas = [];
+
+  zonas.forEach((zona, i) => {
+    const respuesta = zona.textContent.trim();
+    const correcta = zona.dataset.correct;
+    if (respuesta === correcta) {
+      correctas++;
+    } else {
+      incorrectas.push(`Fila ${i + 1}`);
+    }
+  });
+
+  if (correctas === zonas.length) {
+    alert("🎉 ¡Excelente! Todas tus respuestas son correctas.");
+  } else {
+    alert(`✅ Correctas: ${correctas}\n❌ Revisá: ${incorrectas.join(", ")}\n📚 ¡A estudiar un poquito más!`);
+  }
+}
+</script>
+
+</body>
+</html>
