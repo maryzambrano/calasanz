@@ -51,37 +51,41 @@
     </nav>
 
     <main style="padding: 20px;">
-        <h2>Entradas Digitales</h2>
-    <hr>
-    <p>Son utilizadas para leer el estado de un dispositivo conectado a nuestra placa Arduino, como un sensor de contacto, un interruptor, un sensor de proximidad infrarrojo o cualquier otro dispositivo que envíe señales digitales.</p>
-    <p>Estas señales disparan valores booleanos como: SI/NO, TRUE /FALSE, 0/1, que nos permiten programar acciones en función de esa lectura. Por ejemplo, puedes hacer que tu proyecto responda cuando un botón es presionado o un objeto pasa frente a un sensor.</p>
-    <img src="./entradasDigitales.png" class="img-fluid mx-auto">
-    <h3>Ejercicio:</h3>
-    <p>Realiza un programa que permita encender el LED integrado cada vez que presiones un pulsador.</p>
-    <p>Armar el circuito como muestra la imagen:</p>
-    <img src="./PulsadorAbierto.png" class="img-fluid mx-auto">
-    <br><br>
-    <ol>
-        <li>Conectar el pulsador en el centro de la protoboard, ya que utilizaremos sólo 2 clavijas: un lado positivo y el otro negativo.</li>
-        <li>Conectar el cable de alimentación (rojo) desde el pin 5V, hacia el bus positivo de la protoboard.</li>
-        <li>Conectar un cable (negro) desde el GND, hacia el bus negativo de la protoboard.</li>
-        <li>Conectar el resistor de 10k alineado con el extremo positivo del pulsador y en el otro extremo con el bus positivo de la protoboard.</li>
-        <li>Conectar un cable (azul) desde el pin digital 2 alineado entre el resistor y el lado positivo del pulsador.</li>
-        <li>Conectar un cable (negro) desde el lado negativo del pulsador, hacia el bus negativo de la protoboard.</li>
-    </ol>
-    <p>Ahora vamos a realizar el programa en S4A, recuerda conectar la placa al puerto USB y comprobar si existe comunicación.</p>
-    <img src="./LED13conPulsador.png" class="img-fluid mx-auto">
-    <br><br>
-    <h3>Actividad:</h3>
-    <ol>
-        <li>Conectar un LED en el pin <b>Digital 10</b> y haz que se encienda al presionar el pulsador. Agregar una máscara a tu gusto.</li>
-        <li>Intercambiar la conexión del resistor y el Pin 2 hacia el lado negativo del pulsador, como muestra la imagen. ¿Qué observas? Investiga las resistencias pull-up y pull-down.</li>
-        <img src="./PulsadorCerrado.png" class="img-fluid mx-auto">
-        <li>Puedes cambiar el funcionamiento del LED a través de la programación. Por ejemplo, si deseas que el LED se encienda al presionar el pulsador y se quede en ese estado hasta presionar nuevamente el pulsador, entonces podemos declarar dos variables de estado que podrán evaluarse a través de condionales y cambiar el estado del LED. El programa sería como muestra la imagen: </li>
-        <img src="../imgs/pulsador_estado.png" class="img-fluid mx-auto">
-    </ol>
-        
+        <h3>Entradas Analógicas en S4A</h3>
+        <p>Una entrada analógica en Arduino Uno es un pin (A0-A5) que puede medir un rango de voltajes continuos, desde 0V hasta 5V, y convertirlos en valores digitales entre 0 y 1023. Estos pines se utilizan para leer señales de sensores que miden magnitudes variables, como temperatura, luz o sonido. </p>
+        <img src="../imgs/EntradasAnalogicas.jpg" class="img-fluid mx-auto" >
+        <p>Veremos algunos ejemplos de entradas analógicas con el sensor LDR y el potenciómetro.</p>
 
+        <h4>I. LDR (Light Dependent Resistor):</h4>
+        <p>Una LDR o resistencia dependiente de la luz también conocida como fotoresistencia, fotocélula, o fotoconductor, es un tipo de resistencia cuya resistencia varía dependiendo de la cantidad de luz que cae sobre su superficie. Cuando la luz cae sobre la resistencia, entonces la resistencia cambia. Por lo tanto, son dispositivos sensibles a la luz.</p>
+        <img src="../imgs/Fotorresistor.jpg" class="img-fluid mx-auto" >
+
+        <h4>Ejercicio N° 1: Control del LED integrado a través de una LDR</h4>
+        <p>Crear un programa que permita encender el LED integrado (Pin 13) a través de un sensor LDR. De manera que, si el sensor recibe luz, el LED esté apagado, pero si el sensor deja de percibir luz, el LED se encienda.</p>
+        <h4>El Circuito:</h4>    
+        <img src="../imgs/LDR-LED.png" class="img-fluid mx-auto" >
+
+        <h4>El Programa:</h4>    
+        <img src="../imgs/LDR-LED_Programa.png" class="img-fluid mx-auto" >
+
+        <p><strong>Desafío:</strong> Conectar un LED al pin 10 que se encienda o apague dependiendo de la cantidad de luz que recibe la LDR.</p>
+
+        <h4>II. Potenciómetro:</h4>
+        <p>Es un resistor variable manual que se utiliza como un sensor de entrada analógica para controlar valores en un circuito. Permite modificar el voltaje o la resistencia de manera continua girando una perilla, lo que Arduino interpreta como un valor numérico entre 0 y 1023 para enviar a los pines analógicos.  </p>
+        <img src="../imgs/potenciometro1.png" class="img-fluid mx-auto"><br><br>
+
+        <h4>Ejercicio N° 2: Control de LED integrado a través de un potenciómetro</h4>
+        <p>Crear un programa que permita encender el LED integrado (Pin 13) a través de un potenciómetro. De manera que, al girar la perilla, el LED se encienda o apague.</p>
+        <h4>El Circuito:</h4>    
+        <img src="../imgs/Potenciometro.png" class="img-fluid mx-auto" >
+
+        <h4>El Programa:</h4>    
+        <p>Puedes utilizar el mismo programa realizado en el ejercicio anterior.</p>
+        
+        <p><strong>Mejora:</strong> Conectar un LED al pin 9 que se encienda gradualmente al girar la perilla del potenciómetro.</p>
+        <img src="../imgs/potenciometro_LEDgradual.png" class="img-fluid mx-auto" >
+        
+        
     </main>
 
     <footer>
@@ -90,11 +94,5 @@
 
     <!--SCRIPTS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-</html>
-
-
-<body>
-     
 </body>
 </html>
