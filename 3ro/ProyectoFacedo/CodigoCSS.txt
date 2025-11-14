@@ -1,0 +1,154 @@
+body {
+  font-family: cursive, sans-serif;
+  background-color: #ebfffa; 
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #342a42; 
+}
+header {
+  background-image: url("./agua.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #5c4033; 
+  text-shadow: 1px 1px 2px #ebfffa; 
+}
+
+.fraseinicio {
+  font-style: italic;
+  color: #8b5e3c;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 1px #ebfffa;
+}
+nav {
+  background-color: #3c8b6b; 
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #ebfffa;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: silver;
+}
+
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  color: #334a5c;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#virtudes {
+  background-color: rgba(154, 232, 227, 0.5);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+#frases table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #ebfffa;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#frases th,
+#frases td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #a5bbd8;
+}
+
+#frases th {
+  background-color: #60c0ad; 
+  color: #ebfffa;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#frases tr:hover {
+  background-color: #a8e3c1;
+  transition: background-color 0.3s ease;
+}
+
+#imagenes .galeria-imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta-obra {
+  background-color: #ebfffa;
+  border: 1px solid #a5d5d8;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-obra:hover {
+  transform: scale(1.02);
+}
+
+.tarjeta-obra img {
+  width: 100%;
+  height: auto;
+}
+
+.info-img {
+  padding: 1rem;
+}
+
+.info-img h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #3c868b;
+}
+
+.info-img p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+footer {
+  background-color: #3c8b67;
+  color: #ebfffa;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: #ebfffa;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  margin: 0 0.5rem; 
+  font-size: 1.8rem; 
+  display: inline-block; 
+}
+
+footer a:hover {
+  color: silver;
+}

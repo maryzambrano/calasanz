@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <title>Beato P. Faustino Oteiza Segura de la Virgen de los Dolores Sch.P.</title>
+  <link rel="stylesheet" href="./Proyecto.css" />
+</head>
+<body>
+  <header>
+    <h1>Beato Faustino Oteiza Segura</h1>
+    <p class="fraseinicio">"Rueguen para que el Señor se compadezca de nuestros perseguidores a quienes perdonamos de todo corazón"</p>
+  </header>
+
+  <nav>
+    <a href="#biografia">Biografía</a>
+    <a href="#virtudes">Virtudes</a>
+    <a href="#frases">Frases</a>
+    <a href="imagenes">Galería</a>  
+  </nav>
+
+  <main>
+    <section id="biografia">
+      <h2>Biografía</h2>
+      <p style="text-align: justify;">
+El P. Faustino nació el día 14 de febrero de 1890, en Ayegui, un pueblo de Navarra, España, y fue hijo de D. Isidoro Oteiza, y Dña. Ángela Segura Adrián. Fue bautizado en su pueblo natal un día después de nacer por P. Juan Ramón San Martín, escolapio.
+Hasta sus nueve años estudió en su pueblo natal; luego continuó sus estudios en el colegio escolapio de Estella ubicado a 3 km de Ayegui. En 1905, tras recuperarse de una grave pulmonía, firmó la solicitud de ingreso a la Escuela Pía. Se marchó al este a realizar el breve postulantado (preparación para la vida consagrada) y los dos años correspondientes al noviciado (formación y prueba en una orden), en Peralta de la Sal. El 15 de agosto de 1907 emitió los votos simples, acompañado por su Maestro de Novicio, P. Dionisio Pamplona. Se encaminó a los pocos días hacia Irache, a realizar sus estudios de filosofía y materias complementarias, y vivir una intensa vida interior. En Alcañiz cursó sus estudios filosóficos y pronunció sus votos solemnes el 15 de julio de 1912. Poco después acabó sus estudios y recibió la primera y única obediencia de su vida para la Casa del noviciado en Peralta.
+Desde 1912 hasta 1919 fue Maestro de la llamada “Escuela de los Niños”. Aunque a los pocos meses tuvo que retirarse a Zaragoza a recibir la tonsura (cortar el cabello dejando únicamente un aro de este), órdenes menores y subdiaconado; en Balaguer lo ordenaron diácono; recibió finalmente el 14 de septiembre de 1913 el orden sacerdotal en Terrasa. Los siguientes siete años los superiores le juzgaron digno de ser el brazo derecho del Maestro de novicios y como ayudante del mismo lo pasaron al noviciado en el verano de 1919. Tras la presentación ante los novicios, contestó solo “Laus Deo” (alabado sea Dios). En él colaboró enseñando latín y matemática. En 1920 sufrió una enfermedad, que una vez superada le dejó un temblor crónico. Cuenta un testigo “sus predicaciones frecuentes a los fieles eran los septenarios a la Virgen y san José; iban también acompañados con mucha unción: “Misericordias Domini in aeternum cantabo” era el encabezamiento casi corriente de sus sermones”.
+A partir de entonces escribió gran cantidad de cartas sobre críticas hacia leyes perjudiciales a la Iglesia, sobre la actividad de los cristianos, sobre la educación e, incluso, su premonición de su propio martirio, diciendo que lo recibiría con paz.
+En 1936, dos hombres llegaron al lugar donde el P. Faustino se refugiaba, y le pidieron que los acompañara para “deponer en una causa”. Faustino se percató de que había llegado su martirio, por lo que pidió tiempo para confesarse, se vistió con ropa de paisano para que no se profanasen su hábito religioso, y bendijo a los presentes. Se lo llevaron en auto hasta casi el final del pueblo de Azanuy donde lo obligaron a bajar y lo pusieron frente a su verdugo junto con el P. Florentín. Los fusilaron y sus cuerpos fueron rociados con gasolina y quemados parcialmente para luego ser enterrados en la zona de sus fusilamientos.
+Fue beatificado en 1995 por Juan Pablo II.
+</p>
+    </section>
+
+    <section id="virtudes">
+      <h2>Virtudes Escolapias</h2>
+      <ul>
+        <li><strong>Humildad:</strong> En vida Estuvo dispuesto a servir, y en su martirio no luchó,sino que aceptó su destino serenamente.</li>
+        <li><strong>Entrega:</strong>Su naturaleza era la de entregarse, así lo hizo con Dios, con las personas de su alrededor, y con su oficio.</li>
+        <li><strong>Fe:</strong>Él nunca desconfió del plan que Dios le había predispuesto, y siempre buscó hacer lo mejor para seguirlo, sin importar las consecuencias terrenales, porque él tenía una mirada más trascendental que solo lo que ocurre en este mundo. Él miraba siempre sobre él.</li>
+      </ul>
+    </section>
+
+    <section id="frases">
+      <h2>Frases </h2>
+      <p>Si bien Faustino no posee frases célebres, a continuación se mostrarán frases interesantes y su contexto, para conocer un poco más de su historia.</p>
+        <table>
+          <tr>
+            <th>Frase</th>
+            <th>Significado y Contexto</th>
+          </tr>
+          <tr>
+            <td>"Si nos vemos en la tierra, hasta entonces, y si no, hasta el cielo"</td>
+            <td>En este momento, el P. Faustino sabía, de alguna forma, que su martirio estaba cerca, por lo que así se despide en una carta enviada al Padre provincial de Aragón aproximadamente ocho dias antes de entregarse a Dios. Esto demuestra, además, su convicción de su destino en el cielo.</td>
+          </tr>
+          <tr>
+            <td>"Antonio, ¿A tu maestro vas a matar?"</td>
+            <td>Esta frase la dice cuando está ante los verdugos. Entre ellos reconoce a uno que había sido alumno suyo. Al escuchar esta frase, Antonio baja el arma y retrocede, avergonzado.</td>
+          </tr>
+          <tr>
+            <td>"Rueguen para que el Señor se compadezca de nuestros perseguidores a quienes perdonamos de todo corazón"</td>
+            <td>Hasta el final demostró su humildad y su amor a Dios, ya que incluso hizo lo mismo que Jesús al perdonar a sus perseguidores y esperar su redención en el Cielo.</td>
+          </tr>
+        </table>
+    </section>
+
+    <section id="imagenes">
+    <h2>Galería de imágenes</h2>
+    <div class="galeria-imagenes">
+        <img src="./Faustino Oteiza Segura.jpg" alt="Faustino Oteiza Segura">
+        <div class="info-img">
+          <h3>Imagen De Faustino Oteiza Segura</h3>
+          <p><strong>Fecha estimada:</strong>Mitades del S.XX</p>
+          <p><strong>Información:</strong>Se estima que fue tomada en la juventud del Beato</p>
+      </div>
+        <img src="./Beatos.jpg" alt="Mártires escolapios">
+        <div class="info-img">
+          <h3>Pintura de Mártires Escolapios de la Guerra Civil Española</h3>
+          <p><strong>Artista:</strong> Obra devocional encargada por la Orden</p>
+          <p><strong>Técnica:</strong> Óleo sobre lienzo</p>
+          <p><strong>Información:</strong>En esta imagen aparecen diversos mártires españoles entre los cuales está Faustino.</p>
+        </div>
+      </div>
+        <img src="./Azanuy.jpg" alt="Azanuy">
+        <div class="info-img">
+          <h3>Azanuy</h3>
+          <p><strong>Información:</strong> Una pequeñaparte del pueblo en el que se produjo el martirio de Faustino.</p>
+        </div>
+    </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Taller de Informática</p>
+    <a href="Beato P. Faustino Oteiza Segura de la Virgen de los Dolores Sch. P..docx"><i class="bi bi-filetype-doc"></i></a>
+    <a href="./CodigoHTML.txt"><i class="bi bi-filetype-html"></i></a>
+    <a href="./CodigoCSS.txt"><i class="bi bi-filetype-css"></i></a>
+  </footer>
+</body>
+</html>
