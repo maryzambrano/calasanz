@@ -80,7 +80,7 @@ const alumnos = [
   { id_alumno: "76", nombre: "Zambrano Emily", curso: "3-E", id_equipo: "3E7", github: "https://github.com/emilyzambrano256" }
 ];
 
-const ejercicios = [
+/*const ejercicios = [
   //3H
   { id_alumno: "1", tipo: "ejercicios", urlEjercicios: "https://solbernall.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
   { id_alumno: "2", tipo: "ejercicios", urlEjercicios: "https://solbernall.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
@@ -163,6 +163,72 @@ const ejercicios = [
   { id_alumno: "75", tipo: "ejercicios", urlEjercicios: "https://ambar890.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
   { id_alumno: "76", tipo: "ejercicios", urlEjercicios: "https://emilyzambrano256.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false }
 
+];*/
+
+const ejercicios = [
+  //3H
+  { id_equipo: "3H1", tipo: "ejercicios", urlEjercicios: "https://solbernall.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H2", tipo: "ejercicios", urlEjercicios: "https://keylacarrion00.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H3", tipo: "ejercicios", urlEjercicios: "https://bian200171.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H4", tipo: "ejercicios", urlEjercicios: "https:///github.com/ambar-mica", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H5", tipo: "ejercicios", urlEjercicios: "https:///github.com/lukitasymateoficda", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H6", tipo: "ejercicios", urlEjercicios: "https://danielcastro2010.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H7", tipo: "ejercicios", urlEjercicios: "https://roccoext09.github.io/INFORMATICA/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H8", tipo: "ejercicios", urlEjercicios: "https://fedealanizz.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H9", tipo: "ejercicios", urlEjercicios: "https://sofigypalo.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false},
+  { id_equipo: "3H10", tipo: "ejercicios", urlEjercicios: "https://grupo4-lys.github.io/taller/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H11", tipo: "ejercicios", urlEjercicios: "https://renatacanonico.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H12", tipo: "ejercicios", urlEjercicios: "https://ciropartente.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H13", tipo: "ejercicios", urlEjercicios: "https://cpitoig.github.io/Informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H14", tipo: "ejercicios", urlEjercicios: "https://cami-l5.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H15", tipo: "ejercicios", urlEjercicios: "https://gaspi1ulises2.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H16", tipo: "ejercicios", urlEjercicios: "https://evoymartin.github.io/Informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H17", tipo: "ejercicios", urlEjercicios: "https://juaniguada1111.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H18", tipo: "ejercicios", urlEjercicios: "https://juan94689.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_equipo: "3H19", tipo: "ejercicios", urlEjercicios: "https://miliscarfo.github.io/scarfo-y-benja", img: "img/ejercicios.jpg", destacado: false },
+//3C
+  { id_alumno: "38", tipo: "ejercicios", urlEjercicios: "https://sofymartin.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "39", tipo: "ejercicios", urlEjercicios: "https://catabruscoo.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "40", tipo: "ejercicios", urlEjercicios: "https://macarenascarfo.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "41", tipo: "ejercicios", urlEjercicios: "https://cataaress.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "42", tipo: "ejercicios", urlEjercicios: "https://vickymonet.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "43", tipo: "ejercicios", urlEjercicios: "https://florlovece.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "44", tipo: "ejercicios", urlEjercicios: "https://valentinadileva.github.io/Taller/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "45", tipo: "ejercicios", urlEjercicios: "https://tomiaven.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "46", tipo: "ejercicios", urlEjercicios: "https://santimunte.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "47", tipo: "ejercicios", urlEjercicios: "https://m4t4t14s.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "48", tipo: "ejercicios", urlEjercicios: "https://juan-cruz-perez.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "49", tipo: "ejercicios", urlEjercicios: "https://francisca11ch.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "50", tipo: "ejercicios", urlEjercicios: "https://zairaaguirre.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "51", tipo: "ejercicios", urlEjercicios: "https://depompeyavengo22.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "52", tipo: "ejercicios", urlEjercicios: "https://nicotala912.github.io/Informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "53", tipo: "ejercicios", urlEjercicios: "https://isa-facedo.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "54", tipo: "ejercicios", urlEjercicios: "https://joaquinpirochino.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "55", tipo: "ejercicios", urlEjercicios: "https://lautaro12345678910.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "56", tipo: "ejercicios", urlEjercicios: "https://andre-solis.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "57", tipo: "ejercicios", urlEjercicios: "https://diegonaveaa.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+
+  //3E
+   { id_alumno: "58", tipo: "ejercicios", urlEjercicios: "https://martinc2521.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "59", tipo: "ejercicios", urlEjercicios: "https://luciano985.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "60", tipo: "ejercicios", urlEjercicios: "https://valenxeneize28.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "61", tipo: "ejercicios", urlEjercicios: "https://tomicar10.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "62", tipo: "ejercicios", urlEjercicios: "https://gododoy.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "63", tipo: "ejercicios", urlEjercicios: "https://felivilla10.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "64", tipo: "ejercicios", urlEjercicios: "https://sofialuini302010.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "65", tipo: "ejercicios", urlEjercicios: "https://catauuu.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "66", tipo: "ejercicios", urlEjercicios: "https://pilar09161.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "67", tipo: "ejercicios", urlEjercicios: "https://triniscatta.github.io/Informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "68", tipo: "ejercicios", urlEjercicios: "https://salonsochanuar.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "69", tipo: "ejercicios", urlEjercicios: "https://agustinypuntofinal.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "70", tipo: "ejercicios", urlEjercicios: "https://laralopez-informatica.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "71", tipo: "ejercicios", urlEjercicios: "https://magaescudero.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "72", tipo: "ejercicios", urlEjercicios: "https://candelagarbarinoo.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "73", tipo: "ejercicios", urlEjercicios: "https://pazgonzalezherra.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "74", tipo: "ejercicios", urlEjercicios: "https://belu0425.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "75", tipo: "ejercicios", urlEjercicios: "https://ambar890.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false },
+  { id_alumno: "76", tipo: "ejercicios", urlEjercicios: "https://emilyzambrano256.github.io/informatica/", img: "img/ejercicios.jpg", destacado: false }
+
 ];
 
 const proyectos = [
@@ -174,11 +240,11 @@ const proyectos = [
   { id_equipo: "3H5", personaje: "Beato Alfredo Parte", tipo: "proyecto", urlProyecto: "https://lukitasymateoficda.github.io/Proyecto-1/", img: "img/BeatoAlfredoParte.jpg", destacado: false },
   { id_equipo: "3H6", personaje: "Beato Pedro Casani", tipo: "proyecto", urlProyecto: "https://danielcastro2010.github.io/Proyecto/", img: "img/BeatoPedroCasani.jpg", destacado: false },
   { id_equipo: "3H7", personaje: "Beato David De Vergara", tipo: "proyecto", urlProyecto: "https://roccoext09.github.io/PROYECTO/", img: "img/BeatoDavidDeVergara.jpg", destacado: false },
-  { id_equipo: "3H8", personaje: "Beato Faustino Oteiza", tipo: "proyecto", urlProyecto: "https://fedealanizz.github.io/proyecto/", img: "img/BeatoFaustinoOteizaSegura.jpg", destacado: false },
+  { id_equipo: "3H8", personaje: "Beato Faustino Oteiza Segura", tipo: "proyecto", urlProyecto: "https://fedealanizz.github.io/proyecto/", img: "img/BeatoFaustinoOteizaSegura.jpg", destacado: false },
   { id_equipo: "3H9", personaje: "Beato Dionisio Pamplona", tipo: "proyecto", urlProyecto: "https://sofigypalo.github.io/proyecto/", img: "img/BeatoDionisioPamplona.jpg", destacado: false },
   { id_equipo: "3H10", personaje: "", tipo: "proyecto", urlProyecto: "", img: "",  destacado: false },
   {  id_equipo: "3H11", personaje: "San Faustino Miguez", tipo: "proyecto", urlProyecto: "https://renatacanonico.github.io/proyecto-1/", img: "img/SanFaustinoMiguez.jpg", destacado: false },
-  { id_equipo: "3H12", personaje: "Mártir José Sánchez del Río", tipo: "proyecto", urlProyecto: "https://ciropartente.github.io/proyecto", img: "img/MartirJoseSanchezdelRio.jpg", destacado: false },
+  { id_equipo: "3H12", personaje: "Mártir José Sánchez del Río", tipo: "proyecto", urlProyecto: "https://maryzambrano.github.io/calasanz/3ro/ProyectoPartente/index.html", img: "img/MartirJoseSanchezdelRio.jpg", destacado: false },
   { id_equipo: "3H13", personaje: "Beato Ignacio Caselles García", tipo: "proyecto", urlProyecto: "https://cpitoig.github.io/Proyecto1/", img: "img/SinImagen.jpg", destacado: false },
   { id_equipo: "3H14", personaje: "Beato Glicerio Landriani", tipo: "proyecto", urlProyecto: "https://cami-l5.github.io/Proyecto/", img: "img/BeatoGlicerioLandriani.jpg", destacado: false },
   { id_equipo: "3H15", personaje: "Beato José Ferrer Esteve", tipo: "proyecto", urlProyecto: "https://gaspi1ulises2.github.io/gaspi21proyecto/", img: "img/BeatoJoseFerrerEsteve.jpg", destacado: false },
@@ -189,18 +255,16 @@ const proyectos = [
   //3C
   { id_equipo: "3C1", personaje: "San Faustino Miguez", tipo: "proyecto", urlProyecto: "https://sofymartin.github.io/proyecto/", img: "img/SanFaustinoMiguez.jpg", destacado: false },
   { id_equipo: "3C2", personaje: "Beato Pedro Casani", tipo: "proyecto", urlProyecto: "https://catabruscoo.github.io/PROYECTO/", img: "img/BeatoPedroCasani.jpg", destacado: false },
-  { id_equipo: "3C3", personaje: "Beato Faustino Oteiza", tipo: "proyecto", urlProyecto: "https://vickymonet.github.io/Proyecto/", img: "img/BeatoFaustinoOteizaSegura.jpg", destacado: false },
+  { id_equipo: "3C3", personaje: "Beato Faustino Oteiza Segura", tipo: "proyecto", urlProyecto: "https://vickymonet.github.io/Proyecto/", img: "img/BeatoFaustinoOteizaSegura.jpg", destacado: false },
   { id_equipo: "3C4", personaje: "Beato Glicerio Landriani", tipo: "proyecto", urlProyecto: "https://florlovece.github.io/Proyecto1/", img: "img/BeatoGlicerioLandriani.jpg", destacado: false },
   { id_equipo: "3C5", personaje: "Beato Dionisio Pamplona", tipo: "proyecto", urlProyecto: "https://tomiaven.github.io/proyecto-1/", img: "img/BeatoDionisioPamplona.jpg", destacado: false },
   { id_equipo: "3C6", personaje: "Beato Florentín Felipe Naya", tipo: "proyecto", urlProyecto: "https://m4t4t14s.github.io/proyecto.js/", img: "img/BeatoFlorentinFelipeNaya.jpg", destacado: false },
   { id_equipo: "3C7", personaje: "Beato Alfredo Parte", tipo: "proyecto", urlProyecto: "https://francisca11ch.github.io/Proyecto-1/", img: "img/BeatoAlfredoParte.jpg", destacado: false },
   { id_equipo: "3C8", personaje: "San Pompilio María Pirrotti", tipo: "proyecto", urlProyecto: "https://depompeyavengo22.github.io/Proyecto/", img: "img/SanPompilioMariaPirrotti.jpg", destacado: false },
-  { id_equipo: "3C9", personaje: "Beato Faustino Oteiza Segura", tipo: "proyecto", urlProyecto: "https://isa-facedo/github.io/Proyecto", img: "img/BeatoFaustinoOteizaSegura.jpg", destacado: false },
-  { id_equipo: "3C10", personaje: "Beato Joaquín Erviti Lazcano", tipo: "proyecto", urlProyecto: "https://github.com/Joaquinpirochino/Proyecto", img: "img/BeatoJoaquinErvitiLazcano.jpeg", destacado: false },
-  { id_equipo: "3C11", personaje: "Beato Manuel Segura López", tipo: "proyecto", urlProyecto: "https://diegonaveaa.github.io/Proyecto/", img: "img/BeatoManuelSeguraLopez.jpg", destacado: false },
-
+  { id_equipo: "3C9", personaje: "Beato Faustino Oteiza Segura", tipo: "proyecto", urlProyecto: "https://maryzambrano.github.io/calasanz/3ro/ProyectoFacedo/index.html", img: "img/BeatoFaustinoOteizaSegura.jpg", destacado: false },
+  { id_equipo: "3C10", personaje: "Beato Joaquín Erviti Lazcano", tipo: "proyecto", urlProyecto: "https://joaquinpirochino.github.io/Proyecto/", img: "img/BeatoJoaquinErvitiLazcano.jpeg", destacado: false },
+  { id_equipo: "3C11", personaje: "Beato Manuel Segura López", tipo: "proyecto", urlProyecto: "https://maryzambrano.github.io/calasanz/3ro/ProyectoSolis/manuel.html", img: "img/BeatoManuelSeguraLopez.jpg", destacado: false },
   //3E
-  
   { id_equipo: "3E1", personaje: "San Pompilio María Pirrotti", tipo: "proyecto", urlProyecto: "https://martinc2521.github.io/Proyecto/", img: "img/SanPompilioMariaPirrotti.jpg", destacado: false },
   { id_equipo: "3E2", personaje: "Santo Tomás de Aquino", tipo: "proyecto", urlProyecto: "https://gododoy.github.io/Proyecto-1/", img: "img/SantoTomasdeAquino.jpg", destacado: false},
   { id_equipo: "3E3", personaje: "Beato Alfredo Parte", tipo: "proyecto", urlProyecto: "https://sofialuini302010.github.io/Proyecto/", img: "img/BeatoAlfredoParte.jpg", destacado: false },
