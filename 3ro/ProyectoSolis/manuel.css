@@ -1,0 +1,97 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:rgb(77, 158, 61);
+}
+header {
+    background-image:url(fondo.png)
+    background-size cover;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 2rem;
+}
+/* Estilos generales para el texto y las secciones principales */
+strong {
+    color: rgb(30, 92, 5);
+}
+h1 {
+    color: rgb(218, 198, 174);
+    text-shadow: #000000 0.1em 0.1em 0.2em;
+}
+h2 {
+    color:rgb(9, 134, 46);
+    padding-top: 25px;
+    padding-left: 25px;
+    font-size: 2rem; /* Corrección de font-size */
+}
+p {
+    line-height: 1.5;
+}
+ul {
+    line-height: 1.5;
+    list-style-type: disc;
+    text-align: justify;
+}
+.seccion-principal {
+    background-color: rgb(255, 236, 220);
+    color: black;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 8px;
+}
+.frase-celebre {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.1rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 8px;
+}
+/* Estilos para la barra de navegación */
+.oscuro {
+    background-color: rgb(9, 78, 21);
+    color: white;
+    text-align: center;
+    text-shadow: #000000 0.1em 0.1em 0.2em;
+    font-size: 2.3rem;
+    padding: 1rem 0; /* Agregué un padding para que no se vea el texto pegado a los bordes */
+}
+nav a {
+    margin: 0 25px; /* Código más corto */
+    text-decoration: none;
+    color: #fff8ec;
+}
+/* Estilos para la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%; /* La tabla ocupará todo el ancho de su contenedor */
+    margin: 20px 0; /* Espacio arriba y abajo */
+    font-family: Arial, sans-serif;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: rgb(17, 107, 17);
+    color: #fff8ec;
+}
+/* Estilos para el footer */
+footer {
+    background-color: rgb(16, 94, 22);
+    color: #fff8ec;
+    text-align: center;
+    padding: 1rem;
+}
+footer a {
+    color: #fff8ec;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    margin: 0 0.5rem; 
+    font-size: 1.8rem; 
+    display: inline-block; 
+}
+footer a:hover {
+    color: rgb(23, 119, 14);
+}
