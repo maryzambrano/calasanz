@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <!-- ESTILOS PARA EL MODAL-->
+<style>
+.modal {
+ display: none; /* oculto hasta abrir */
+ position: fixed;
+ left: 0; top: 0;
+ width: 100%; height: 100%;
+ background-color: rgba(0,0,0,0.5);
+ z-index: 1000;
+}
+.modal-contenido {
+ background: white;
+ margin: 5% auto;
+ padding: 20px;
+ border-radius: 10px;
+ max-width: 600px;
+ max-height: 80vh;
+ overflow-y: auto;
+}
+.cerrar { float: right; cursor: pointer; font-size: 24px; }
+</style> 
+
+</head>
+<body>
+<!-- SECCIÓN PARA JUGAR TRIVIA -->
+<section id="jugar-trivia">
+<h2>¿Te animas a poner a prueba tus conocimientos?</h2>
+<button id="abrirTrivia">Comenzar Trivia</button>
+</section>
+<!-- MODAL -->
+<div id="modalTrivia" class="modal">
+ <div class="modal-contenido">
+ <span class="cerrar">&times;</span>
+ <!-- Aquí irá el formulario y resultados -->
+  <h2>Trivia sobre San José de Calasanz</h2>
+<form id="formTrivia">
+ <p><strong>1.</strong> ¿Dónde nació San José de Calasanz?</p>
+ <label><input type="radio" name="p1" value="Madrid"> Madrid</label><br>
+ <label><input type="radio" name="p1" value="Peralta de la Sal"> Peralta de la Sal</label><br>
+ <label><input type="radio" name="p1" value="Roma"> Roma</label><br><br>
+ <button type="submit">Enviar respuestas</button>
+ <p><strong>2.</strong> ¿en que año nacio San José de Calasanz?</p>
+ <label><input type="radio" name="p2" value="1556"> 1556</label><br>
+ <label><input type="radio" name="p2" value="1653"> 1653</label><br>
+ <label><input type="radio" name="p2" value="1756"> 1756</label><br><br>
+ <button type="submit">Enviar respuestas</button>
+  <p><strong>3.</strong> ¿donde fundo la primera escuela?</p>
+ <label><input type="radio" name="p3" value="Zaragoza"> Zaragoza</label><br>
+ <label><input type="radio" name="p3" value="Roma"> Roma</label><br>
+ <label><input type="radio" name="p3" value="Barcelona"> Barcelona   <b></b></label><br><br>
+ <button type="submit">Enviar respuestas</button>
+</form>
+<div id="resultado"></div> 
+ </div>
+</div> 
+<!-- SCRIPT básico para abrir/cerrar el MODAL-->
+<script>
+const modal = document.getElementById("modalTrivia");
+const btnAbrir = document.getElementById("abrirTrivia");
+const btnCerrar = document.querySelector(".cerrar");
+btnAbrir.onclick = () => { modal.style.display = "block"; };
+btnCerrar.onclick = () => { modal.style.display = "none"; };
+window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+</script> 
+<script>
+document.getElementById("formTrivia").addEventListener("submit", function(e) {
+ e.preventDefault();
+ // Variable para puntaje
+ let puntaje = 0;
+ let salida = "";
+ // Capturamos la respuesta de la PREGUNTA 1
+ let r1 = document.querySelector('input[name="p1"]:checked');
+ // Validamos
+ if (r1) {
+ if (r1.value === "Peralta de la Sal") {
+ puntaje++;
+ salida += "<p class='correcta'>1. 膆 Correcta</p>";
+ } else {
+ salida += "<p class='incorrecta'>1.  Incorrecta. Correcta: Peralta de la Sal</p>";
+ }
+ } else {
+ salida += "<p class='incorrecta'>1.  No respondida. Correcta: Peralta de la Sal</p>";
+ 
+ // Mostramos el resultado dentro del modal, debajo del formulario
+ salida += `<h4>Puntaje final: ${puntaje} de 1</h4>`;
+ document.getElementById("resultado").innerHTML = salida;
+});
+</script> 
+
+</body>
+</html>

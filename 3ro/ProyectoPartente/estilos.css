@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background: #9c1c1c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+blockquote {
+    font-style: italic;
+    background: #eee;
+    padding: 15px;
+    border-left: 4px solid #8b0000;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #a50000;
+}
+
+footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+body.modo-oscuro {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.modo-oscuro header {
+    background: #3a0c0c;
+}
+
+body.modo-oscuro blockquote {
+    background: #2a2a2a;
+    border-left-color: #ff5555;
+}
+
+body.modo-oscuro button {
+    background-color: #444;
+    color: #fff;
+}
+
+body.modo-oscuro footer {
+    background: #111;
+    color: #888;
+}

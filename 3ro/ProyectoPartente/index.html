@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>José Sánchez del Río - Mártir Mexicano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <h1>José Sánchez del Río</h1>
+    <p>Mártir de la fe católica y santo mexicano</p>
+</header>
+
+<main>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Jos%C3%A9_S%C3%A1nchez_del_R%C3%ADo.jpg" alt="José Sánchez del Río">
+
+    <section>
+        <h2>¿Quién fue?</h2>
+        <p>
+            José Sánchez del Río nació el 28 de marzo de 1913 en Sahuayo, Michoacán, México.
+            Fue un joven católico que, durante la persecución religiosa conocida como la
+            <strong>Guerra Cristera</strong>, pidió unirse al movimiento de los cristeros para defender su fe.
+        </p>
+    </section>
+
+    <section>
+        <h2>Martirio</h2>
+        <p>
+            A los 14 años, José fue capturado por el ejército federal. Se le ofreció renunciar a su fe para salvar su vida,
+            pero se negó firmemente. Fue torturado y ejecutado el 10 de febrero de 1928, gritando “¡Viva Cristo Rey!”
+            antes de morir.
+        </p>
+    </section>
+
+    <section>
+        <h2>Canonización</h2>
+        <p>
+            Fue beatificado el 20 de noviembre de 2005 por el Papa Benedicto XVI y canonizado el
+            16 de octubre de 2016 por el Papa Francisco.
+        </p>
+    </section>
+
+    <section>
+        <h2>Frase célebre</h2>
+        <button onclick="toggleFrase()">Mostrar / Ocultar Frase</button>
+        <blockquote id="frase" style="display:none;">
+            “¡Viva Cristo Rey!”
+        </blockquote>
+    </section>
+
+    <section>
+        <h2>Personalización</h2>
+        <button onclick="toggleModo()">Cambiar Modo Claro/Oscuro</button>
+    </section>
+</main>
+
+<footer>
+    Página dedicada a la memoria de San José Sánchez del Río | © 2025
+</footer>
+
+<script>
+    function toggleFrase() {
+        const frase = document.getElementById('frase');
+        if (frase.style.display === 'none') {
+            frase.style.display = 'block';
+        } else {
+            frase.style.display = 'none';
+        }
+    }
+
+    function toggleModo() {
+        document.body.classList.toggle('modo-oscuro');
+    }
+</script>
+
+</body>
+</html>
