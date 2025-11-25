@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ESTILO.css">
+    <title>Santo Tomas de Aquino </title>
+</head>
+<body>
+  <header>
+    <h1>Santo Tomas de Aquino </h1>
+  </header>  
+  <nav class="hf">
+    <a href="#Biografia">Biografia</a>
+    <a href="#Frases">Frases</a>
+    <a href="#Fotos e Imagenes del Santo"> Fotos e Imagenes del Santo </a> 
+    <a href="Trivia">Trivia</a>
+  </nav>
+  <main>
+    <section id="Biografia">
+        <h2>Biografia</h2>
+        <p> Tomás de Aquino nació en una familia aristocrática del sur de Italia y estudió en el monasterio de Montecassino, donde sus padres querían que siguiera la vida religiosa.
+            Más tarde estudió artes y teología en Nápoles, donde entró en contacto con los dominicos y quiso unirse a ellos, aunque su familia se opuso y lo mantuvo retenido durante un año.
+            Tras quedar en libertad, viajó a París, donde estudió bajo la guía de Alberto Magno y obtuvo el título de maestro en teología.
+            
+            En París comenzó a enseñar y a escribir sus primeras obras, alejándose de la corriente teológica agustiniana. 
+            Entre 1259 y 1268 trabajó en Italia al servicio del Papa como instructor y consejero. 
+            En ese período escribió comentarios a autores como Aristóteles y el Pseudo-Dionisio, completó la Suma contra los gentiles y empezó su obra más importante, la Suma Teológica.
+            
+            Tomás respondió a la crisis causada por el averroísmo, una interpretación de Aristóteles que defendía la independencia de la razón respecto de la fe. 
+            Frente a esto, sostuvo que fe y razón no pueden contradecirse porque ambas provienen de Dios; son distintas pero complementarias.
+            También defendió un realismo moderado: los universales existen en las cosas y luego en la mente. Su pensamiento logró armonizar la valoración del mundo material con los dogmas cristianos mediante una interpretación equilibrada de Aristóteles.
+</p>
+    </section>
+      </section>
+    <section id="Frases">
+        <h2>Frases</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th> "El bien puede existir sin el mal, mientras que el mal no puede existir sin el bien." </th>
+            </tr>
+            <tr>
+              <th>"La fe se refiere a las cosas que no se ven, y la esperanza a las cosas que no están al alcance de la mano." </th>
+            </tr>
+            <tr>
+              <th> "El estudioso es el que lleva a los demás a lo que él ha comprendido: la verdad."</th>
+            </tr> 
+          </tbody>
+        </table>
+    </section>
+
+    <section id="Fotos e Imagenes del Santo"></section> 
+        <h2>Fotos e Imagenes del Santo </h2>
+        <img src="./Santo Tomas de Aquino 1.jpg" width="300" height="400" id="img1">
+        <img src="Santo Tomas de Aquino 2.jpg" width="300" height="400" id="img2">
+    </section>
+    <section id="Trivia">
+
+      <!DOCTYPE html>
+      <html lang="es">
+      <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Trivia sobre Santo Tomas de Aquino </title>
+      
+      <!-- ESTILOS PARA EL MODAL-->
+      <style>
+      .modal {
+       display: none; /* oculto hasta abrir */
+       position: fixed;
+       left: 0; top: 0;
+       width: 100%; height: 100%;
+       background-color: rgba(0,0,0,0.5);
+       z-index: 1000;
+      }
+      .modal-contenido {
+       background: white;
+       margin: 5% auto;
+       padding: 20px;
+       border-radius: 10px;
+       max-width: 600px;
+       max-height: 80vh;
+       overflow-y: auto;
+      }
+      .cerrar {
+       float: right;
+       cursor: pointer;
+       font-size: 24px;
+      }
+      .correcta { color: green; }
+      .incorrecta { color: red; }
+      #resultado { margin-top: 1em; }
+      </style>
+      </head>
+      
+      <body>
+      
+      <!-- SECCIÓN PARA JUGAR TRIVIA -->
+      <section id="jugar-trivia">
+       <h2>¿Te animas a poner a prueba tus conocimientos?</h2>
+       <button id="abrirTrivia">Comenzar Trivia</button>
+      </section>
+      
+      <!-- MODAL -->
+      <div id="modalTrivia" class="modal">
+       <div class="modal-contenido">
+        <span class="cerrar">&times;</span>
+      
+        <h2>Trivia sobre Santo Tomas de Aquino </h2>
+      
+        <!-- FORMULARIO DE TRIVIA -->
+        <form id="formTrivia">
+         <p><strong>1.</strong> ¿Dónde nació Santo Tomas de Aquino?</p>
+         <label><input type="radio" name="p1" value="Castrocielo"> Castrocielo </label><br>
+         <label><input type="radio" name="p1" value="Roccasecca"> Roccasecca </label><br>
+         <label><input type="radio" name="p1" value="Santopadre"> Santopadre </label><br><br>
+      
+         <p><strong>2.</strong> ¿En qué año nació?</p>
+         <label><input type="radio" name="p2" value="1225"> 1225 </label><br>
+         <label><input type="radio" name="p2" value="1290"> 1290 </label><br>
+         <label><input type="radio" name="p2" value="1257"> 1257 </label><br><br>
+      
+         <p><strong>3.</strong> ¿En que año murio?</p>
+         <label><input type="radio" name="p3" value="1281"> 1281 </label><br>
+         <label><input type="radio" name="p3" value="1259"> 1259 </label><br>
+         <label><input type="radio" name="p3" value="1274"> 1274 </label><br><br>
+      
+         <p><strong>4.</strong> ¿¿Cuál de estas obras no fue escrita por Santo Tomás de Aquino??</p>
+         <label><input type="radio" name="p4" value="Summa Theologica"> Summa Theologica </label><br>
+         <label><input type="radio" name="p4" value="Cristo ¿la Gran Verdad o solo Mentira?"> Cristo ¿la Gran Verdad o solo Mentira? </label><br>
+         <label><input type="radio" name="p4" value="El ente y la esencia"> El ente y la esencia </label><br><br>
+      
+         <p><strong>5.</strong> ¿Qué día se celebra su festividad?</p>
+         <label><input type="radio" name="p5" value="28 de enero"> 28 de enero </label><br>
+         <label><input type="radio" name="p5" value="18 de octubre"> 18 de octubre</label><br>
+         <label><input type="radio" name="p5" value="07 de julio"> 07 de julio </label><br><br>
+      
+         <button type="submit">Enviar respuestas</button>
+        </form>
+      
+        <div id="resultado"></div>
+       </div>
+      </div>
+      
+      <!-- SCRIPT PARA ABRIR/CERRAR EL MODAL Y EVALUAR -->
+      <script>
+      // --- Modal ---
+      const modal = document.getElementById("modalTrivia");
+      const btnAbrir = document.getElementById("abrirTrivia");
+      const btnCerrar = document.querySelector(".cerrar");
+      
+      btnAbrir.onclick = () => { modal.style.display = "block"; };
+      btnCerrar.onclick = () => { modal.style.display = "none"; };
+      window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+      
+      // --- Trivia ---
+      document.getElementById("formTrivia").addEventListener("submit", function(e) {
+       e.preventDefault();
+      
+       let puntaje = 0;
+       let salida = "";
+      
+       // Pregunta 1
+       let r1 = document.querySelector('input[name="p1"]:checked');
+       if (r1) {
+         if (r1.value === "Roccasecca") {
+           puntaje++;
+           salida += "<p class='correcta'>1. ✅ Correcta</p>";
+         } else {
+           salida += "<p class='incorrecta'>1. ❌ Incorrecta. Correcta: Roccasecca</p>";
+         }
+       } else {
+         salida += "<p class='incorrecta'>1. ❌ No respondida. Correcta: Roccasecca</p>";
+       }
+      
+       // Pregunta 2
+       let r2 = document.querySelector('input[name="p2"]:checked');
+       if (r2) {
+         if (r2.value === "1225") {
+           puntaje++;
+           salida += "<p class='correcta'>2. ✅ Correcta</p>";
+         } else {
+           salida += "<p class='incorrecta'>2. ❌ Incorrecta. Correcta: 1225</p>";
+         }
+       } else {
+         salida += "<p class='incorrecta'>2. ❌ No respondida. Correcta: 1225</p>";
+       }
+      
+       // Pregunta 3
+       let r3 = document.querySelector('input[name="p3"]:checked');
+       if (r3) {
+         if (r3.value === "1274") {
+           puntaje++;
+           salida += "<p class='correcta'>3. ✅ Correcta</p>";
+         } else {
+           salida += "<p class='incorrecta'>3. ❌ Incorrecta. Correcta: 1274</p>";
+         }
+       } else {
+         salida += "<p class='incorrecta'>3. ❌ No respondida. Correcta: 1274</p>";
+       }
+       // Pregunta 4
+       let r4 = document.querySelector('input[name="p4"]:checked');
+       if (r4) {
+         if (r4.value === "Cristo ¿la Gran Verdad o solo Mentira?") {
+           puntaje++;
+           salida += "<p class='correcta'>4. ✅ Correcta</p>";
+         } else {
+           salida += "<p class='incorrecta'>4. ❌ Incorrecta. Correcta:Cristo ¿la Gran Verdad o solo Mentira?</p>";
+         }
+       } else {
+         salida += "<p class='incorrecta'>4. ❌ No respondida. Correcta:Cristo ¿la Gran Verdad o solo Mentira?</p>";
+       }
+      
+       // Pregunta 5
+       let r5 = document.querySelector('input[name="p5"]:checked');
+       if (r5) {
+         if (r5.value === "28 de enero") {
+           puntaje++;
+           salida += "<p class='correcta'>5. ✅ Correcta</p>";
+         } else {
+           salida += "<p class='incorrecta'>5. ❌ Incorrecta. Correcta: 28 de enero</p>";
+         }
+       } else {
+         salida += "<p class='incorrecta'>5. ❌ No respondida. Correcta: 28 de enero</p>";
+       }
+      
+       // --- Resultado final ---
+       salida += `<h4>Puntaje final: ${puntaje} de 5</h4>`;
+       if (puntaje === 5)
+         salida += "<p>🌟 ¡Excelente trabajo!</p>";
+       else if (puntaje >= 3)
+         salida += "<p>👍 Muy bien, conoces bastante sobre Santo Tomas de Aquino .</p>";
+       else
+         salida += "<p>📘 Puedes repasar la página para aprender más.</p>";
+      
+       document.getElementById("resultado").innerHTML = salida;
+      });
+      </script>
+      
+      </body>
+      </html>
+      
+
+
+
+    </section>
+  </main>
+  <footer class="hf">
+    <p>&copy; 2025 Sofia de Pedro Y Luciana Suarez  </p>
+  </footer>
+</body>
+
+
+
+
+</html>
