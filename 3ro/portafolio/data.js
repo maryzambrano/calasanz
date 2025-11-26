@@ -157,7 +157,7 @@ const proyectos = [
   { id_equipo: "3H7", personaje: "Beato David De Vergara", tipo: "proyecto", urlProyecto: "https://roccoext09.github.io/PROYECTO/", img: "img/BeatoDavidDeVergara.jpg", destacado: false },
   { id_equipo: "3H8", personaje: "Beato Faustino Oteiza Segura", tipo: "proyecto", urlProyecto: "https://fedealanizz.github.io/proyecto/", img: "img/BeatoFaustinoOteizaSegura.jpg", destacado: false },
   { id_equipo: "3H9", personaje: "Beato Dionisio Pamplona", tipo: "proyecto", urlProyecto: "https://sofigypalo.github.io/proyecto/", img: "img/BeatoDionisioPamplona.jpg", destacado: false },
-  { id_equipo: "3H10", personaje: "", tipo: "proyecto", urlProyecto: "https://maryzambrano.github.io/calasanz/3ro/ProyectoDePedro/index%20(1).html", img: "img/SantoTomasdeAquino.jpg",  destacado: false },
+  { id_equipo: "3H10", personaje: "Santo Tomás de Aquino", tipo: "proyecto", urlProyecto: "https://maryzambrano.github.io/calasanz/3ro/ProyectoDePedro/index%20(1).html", img: "img/SantoTomasdeAquino.jpg",  destacado: false },
   {  id_equipo: "3H11", personaje: "San Faustino Miguez", tipo: "proyecto", urlProyecto: "https://renatacanonico.github.io/proyecto-1/", img: "img/SanFaustinoMiguez.jpg", destacado: false },
   { id_equipo: "3H12", personaje: "Mártir José Sánchez del Río", tipo: "proyecto", urlProyecto: "https://maryzambrano.github.io/calasanz/3ro/ProyectoPartente/index.html", img: "img/MartirJoseSanchezdelRio.jpg", destacado: false },
   { id_equipo: "3H13", personaje: "Beato Ignacio Caselles García", tipo: "proyecto", urlProyecto: "https://cpitoig.github.io/Proyecto1/", img: "img/SinImagen.jpg", destacado: false },
