@@ -176,7 +176,7 @@ const proyectos = [
   { id_equipo: "3C6", personaje: "Beato Florentín Felipe Naya", tipo: "proyecto", urlProyecto: "https://m4t4t14s.github.io/proyecto.js/", img: "img/BeatoFlorentinFelipeNaya.jpg", destacado: false },
   { id_equipo: "3C7", personaje: "Beato Alfredo Parte", tipo: "proyecto", urlProyecto: "https://francisca11ch.github.io/Proyecto-1/", img: "img/BeatoAlfredoParte.jpg", destacado: false },
   { id_equipo: "3C8", personaje: "San Pompilio María Pirrotti", tipo: "proyecto", urlProyecto: "https://depompeyavengo22.github.io/Proyecto/", img: "img/SanPompilioMariaPirrotti.jpg", destacado: false },
-  { id_equipo: "3C9", personaje: "Beato Faustino Oteiza Segura", tipo: "proyecto", urlProyecto: "https://maryzambrano.github.io/calasanz/3ro/ProyectoFacedo/index.html", img: "img/BeatoFaustinoOteizaSegura.jpg", destacado: false },
+  { id_equipo: "3C9", personaje: "Beato Faustino Oteiza Segura", tipo: "proyecto", urlProyecto: "https://isa-facedo.github.io/Proyecto/", img: "img/BeatoFaustinoOteizaSegura.jpg", destacado: false },
   { id_equipo: "3C10", personaje: "Beato Joaquín Erviti Lazcano", tipo: "proyecto", urlProyecto: "https://joaquinpirochino.github.io/Proyecto2/", img: "img/BeatoJoaquinErvitiLazcano.jpeg", destacado: false },
   { id_equipo: "3C11", personaje: "Beato Manuel Segura López", tipo: "proyecto", urlProyecto: "https://andre-solis.github.io/Proyecto/", img: "img/BeatoManuelSeguraLopez.jpg", destacado: false },
   //3E
@@ -189,5 +189,6 @@ const proyectos = [
   { id_equipo: "3E7", personaje: "Beato Manuel Segura López", tipo: "proyecto", urlProyecto: "https://belu0425.github.io/Proyecto/", img: "img/BeatoManuelSeguraLopez.jpg", destacado: false },
   
 ];
+
 
 
