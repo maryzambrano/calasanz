@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primera página</title>
+</head>
+<body>
+    <form id="formulario">
+  <h2>Registro para el sorteo</h2>
+
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" required>
+
+  <label for="nacimiento">Fecha de nacimiento:</label>
+  <input type="date" id="nacimiento" required>
+
+  <fieldset>
+    <legend>Seleccioná tus aficiones:</legend>
+    <label><input type="checkbox" name="aficion" value="Deportes"> Deportes</label>
+    <label><input type="checkbox" name="aficion" value="Música"> Música</label>
+    <label><input type="checkbox" name="aficion" value="Dibujo"> Dibujo</label>
+    <label><input type="checkbox" name="aficion" value="Lectura"> Lectura</label>
+  </fieldset>
+
+  <button type="submit">Enviar</button>
+</form>
+<script>
+    document.getElementById("formulario").addEventListener("submit", function (e) {
+  e.preventDefault(); // Evita que se recargue la página
+
+  let nombre = document.getElementById("nombre").value;
+  let fecha = document.getElementById("nacimiento").value;
+  let nacimiento = new Date(fecha);
+  let hoy = new Date();
+  let edad = hoy.getFullYear() - nacimiento.getFullYear();
+  let m = hoy.getMonth() - nacimiento.getMonth();
+  if (m < 0 || (m === 0 && hoy.getDate() < nacimiento.getDate())) {
+    edad--;
+  }
+
+  let aficiones = [];
+  document.querySelectorAll('input[name="aficion"]:checked').forEach((el) => {
+    aficiones.push(el.value);
+  });
+
+  if (aficiones.length === 0) {
+    alert("Seleccioná al menos una afición.");
+    return;
+  }
+
+  document.body.innerHTML = `
+    <div>
+      <h1>¡Hola ${nombre}!</h1>
+      <p>Tenés ${edad} años.</p>
+      <p>Estás participando en el sorteo de actividades relacionadas con: ${aficiones.join(", ")}.</p>
+    </div>
+  `;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+
+
+/* ---------- CONFIG ---------- */
+// imagen por defecto para ejercicios
+const IMG_EJERCICIO_DEFAULT = "img/ejercicios.jpg"; // ajusta la ruta
+// imagen por defecto si falta la del santo
+const IMG_SANTO_DEFAULT = "img/santos_default.jpg";
+
+/* ---------- MAPA: tipo -> campo URL ----------
+   Si item.tipo normalizado coincide con una clave del mapa,
+   se toma el campo indicado (por ejemplo 'urlProyecto' o 'urlPortfolio').
+*/
+const URL_FIELD_BY_TIPO = {
+  "proyecto": "urlProyecto",
+  "proyectos": "urlProyecto",
+  "ejercicio": "urlPortfolio",
+  "ejercicios": "urlPortfolio"
+};
+
+/* ---------- EJEMPLO: coloca aquí tu arreglo real 
+const portafolio = [
+  { id:1, nombre:"Bernal Cruz y González Rios", curso:"3-H", tipo:"proyecto", personaje:"San Pompilio", img:"img/santos/san_pompilio.jpg", urlProyecto:"https://solbernall.github.io/Proyecto/", urlPortfolio:"", urlGithub:"https://github.com/solbernall/Proyecto", destacado:true },
+  { id:2, nombre:"Equipo Ej A", curso:"3-H", tipo:"ejercicio", personaje:"Ejercicios HTML", img:"", urlProyecto:"", urlPortfolio:"https://drive.google.com/ejercicios-equipo-A", urlGithub:"https://github.com/equipo-A", destacado:false },
+  // ... reemplaza con el resto
+];---------- */
+
+const portafolio = [
+  {
+    id: 1,
+    nombre: "Bernal Cruz y González Rios",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "San Pompilio María Pirrotti",
+    img: "img/sanPompilio.jpg",
+    urlProyecto: "https://solbernall.github.io/Proyecto/",
+    urlGithub: "https://github.com/solbernall/Proyecto",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 2,
+    nombre: "Borgstrand Pintos y Carrion Flores",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "img/Beato Domingo De Jesús",
+    img: "beatoDomingo.jpg",
+    urlProyecto: "https://keylacarrion00.github.io/proyecto/",
+    urlGithub: "https://github.com/keylacarrion00/proyecto",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 3,
+    nombre: "Galluzzi y Franzese",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "San Lorenzo",
+    img: "img/sanLorenzo.jpg",
+    urlProyecto: "https://bian200171.github.io/proyecto/",
+    urlGithub: "https://github.com/Bian200171/proyecto",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 4,
+    nombre: "Walter y De Luca",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "Manuel Segura López",
+    img: "img/beatoManuelSeguraLopez.jpg",
+    urlProyecto: "https://ambar-mica.github.io/Proyecto/",
+    urlGithub: "https://github.com/Ambar-Mica/Proyecto",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 5,
+    nombre: "Blake y Rey",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "Beato Alfredo Parte",
+    img: "img/beatoAlfredoParte.jpg",
+    urlProyecto: "https://lukitasymateoficda.github.io/Proyecto-1/",
+    urlGithub: "https://github.com/Lukitasymateoficda/Proyecto-1",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: true
+  },
+  {
+    id: 6,
+    nombre: "Castro Maldonado y Costa Cafiero",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "Beato Pedro de la Natividad de Santa Maria Virgen Casani",
+    img: "img/beatoPedroCasani.jpg",
+    urlProyecto: "https://danielcastro2010.github.io/Proyecto/",
+    urlGithub: "https://github.com/danielcastro2010/Proyecto",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: true
+  },
+  {
+    id: 7,
+    nombre: "López Cárdenas y Rossi",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "BEATO DAVID CARLOS DE VERGARA",
+    img: "img/beatoCarlosDeVergara.jpg",
+    urlProyecto: "https://roccoext09.github.io/PROYECTO/",
+    urlGithub: "https://github.com/roccoext09/PROYECTO",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 8,
+    nombre: "Alaniz Blumberg y Alvarez Ponzio",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "Faustino Oteiza",
+    img: "",
+    urlProyecto: "https://fedealanizz.github.io/proyecto/",
+    urlGithub: "https://github.com/fedealanizz/proyecto",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 9,
+    nombre: "Giroldi Sommer y Sánchez Petrone",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "Dionisio Pamplona",
+    img: "",
+    urlProyecto: "https://sofigypalo.github.io/proyecto/",
+    urlGithub: "https://github.com/Sofigypalo/proyecto",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 10,
+    nombre: "de Pedro y Suarez Leiva",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "Tomas Sperat",
+    img: "",
+    urlProyecto: "https://grupo4-lys.github.io/Proyecto-",
+    urlGithub: "https://github.com/Grupo4-lys/Proyecto-",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 11,
+    nombre: "Canónico",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "San Faustino Miguez",
+    img: "",
+    urlProyecto: "https://renatacanonico.github.io/proyecto-1/",
+    urlGithub: "https://github.com/renataCANONICO/proyecto-1",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 12,
+    nombre: "Partente y Perego",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "José Sánchez del Río",
+    img: "",
+    urlProyecto: "https://ciropartente.github.io/proyecto",
+    urlGithub: "https://github.com/ciropartente/proyecto",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 13,
+    nombre: "Maldonado y Martinez Maderal",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "San Alejandro de Jerusalén",
+    img: "",
+    urlProyecto: "https://cpitoig.github.io/Proyecto1/",
+    urlGithub: "https://github.com/cpitoig/Proyecto1/",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 14,
+    nombre: "Bohorquez Gutierrez y Lorefice",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "Venerable Glicerio Landriani",
+    img: "",
+    urlProyecto: "https://cami-l5.github.io/Proyecto/",
+    urlGithub: "https://github.com/Cami-L5/Proyecto",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 15,
+    nombre: "Bertero y Hernández",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "José Ferrer Esteve",
+    img: "",
+    urlProyecto: "https://gaspi1ulises2.github.io/gaspi21proyecto/",
+    urlGithub: "https://github.com/gaspi1ulises2/gaspi21proyecto/",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 16,
+    nombre: "Rapetti y Cancino",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "Florentino Asensio Barroso",
+    img: "",
+    urlProyecto: "https://evoymartin.github.io/proyecto/",
+    urlGithub: "https://github.com/evoymartin/proyecto/",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 17,
+    nombre: "Berto y Silveira Scagliusi",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "Florentin Felipe Naya",
+    img: "",
+    urlProyecto: "https://juaniguada1111.github.io/proyecto-/",
+    urlGithub: "https://github.com/juaniguada1111/proyecto-",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 18,
+    nombre: "Perero y Leaño",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "Beato Ignacio Casanovas",
+    img: "",
+    urlProyecto: "https://juan94689.github.io/Proyecto/",
+    urlGithub: "https://github.com/Juan94689/Proyecto",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+  {
+    id: 18,
+    nombre: "Fernández Benjamín y Scarfo Milagros",
+    curso: "3-H",
+    tipo: "proyecto",
+    personaje: "Beato Ignacio Caselles García",
+    img: "",
+    urlProyecto: "https://miliscarfo.github.io/Proyecto/",
+    urlGithub: "https://github.com/miliscarfo/Proyecto/",
+    urlPortfolio: "",
+    calificación: 0,
+    destacado: false
+  },
+
+];
+
+
+/* ---------- DOM ---------- */
+const container = document.getElementById("cardsContainer");
+const cursoFiltro = document.getElementById("cursoFiltro");
+const tipoFiltro = document.getElementById("tipoFiltro");
+const destacadosBtn = document.getElementById("destacadosBtn"); // opcional
+
+/* ---------- helpers ---------- */
+function normalizar(s){
+  if (s === null || s === undefined) return "";
+  return String(s).trim().toLowerCase();
+}
+function escapeHtml(str){
+  if (str === null || str === undefined) return "";
+  return String(str).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;");
+}
+
+/* ---------- lógica para obtener el enlace "principal" según tipo ---------- */
+function obtenerEnlacePrincipal(item){
+  const tipoItem = normalizar(item.tipo);
+  const urlField = URL_FIELD_BY_TIPO[tipoItem]; // por ejemplo "urlProyecto" o "urlPortfolio"
+
+  // si hay campo mapeado y existe valor en el item, lo usamos
+  if (urlField && item[urlField] && item[urlField].trim()) {
+    return { href: item[urlField].trim(), label: (urlField === "urlProyecto" ? "🌟 Ver Proyecto" : "💻 Ver Portafolio") };
+  }
+
+  // fallbacks: priorizar urlProyecto, luego urlPortfolio, luego urlGithub
+  if (item.urlProyecto && item.urlProyecto.trim()) return { href: item.urlProyecto.trim(), label: "🌟 Ver Proyecto (fallback)" };
+  if (item.urlPortfolio && item.urlPortfolio.trim()) return { href: item.urlPortfolio.trim(), label: "💻 Ver Portafolio (fallback)" };
+  if (item.urlGithub && item.urlGithub.trim()) return { href: item.urlGithub.trim(), label: "🐙 GitHub (fallback)" };
+
+  // si no hay nada
+  return null;
+}
+
+/* ---------- decidir imagen ---------- */
+function obtenerImagen(item){
+  const tipoItem = normalizar(item.tipo);
+  // si es ejercicio -> imagen genérica
+  if (tipoItem === "ejercicio" || tipoItem === "ejercicios") {
+    return IMG_EJERCICIO_DEFAULT;
+  }
+  // si es proyecto -> usar la imagen del santo si existe, sino fallback
+  if (item.img && item.img.trim()) return item.img.trim();
+  return IMG_SANTO_DEFAULT;
+}
+
+/* ---------- render de cards ---------- */
+function mostrarPortafolio(lista){
+  container.innerHTML = "";
+  if (!Array.isArray(lista) || lista.length === 0) {
+    container.innerHTML = '<div class="empty">No se encontraron resultados.</div>';
+    return;
+  }
+
+  lista.forEach(item => {
+    const main = obtenerEnlacePrincipal(item);
+    const github = (item.urlGithub && item.urlGithub.trim()) ? item.urlGithub.trim() : null;
+    const img = obtenerImagen(item);
+
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${escapeHtml(img)}" alt="${escapeHtml(item.personaje || item.nombre)}">
+      <div class="card-content">
+        <h3>${escapeHtml(item.personaje || item.nombre)}</h3>
+        <p><strong>Equipo:</strong> ${escapeHtml(item.nombre)}</p>
+        <p><strong>Curso:</strong> ${escapeHtml(item.curso)}</p>
+        <p><strong>Tipo:</strong> ${escapeHtml(item.tipo)}</p>
+        <div class="links">
+          ${ main ? `<a class="btn" href="${escapeHtml(main.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(main.label)}</a>` : "" }
+          ${ github ? `<a class="btn" href="${escapeHtml(github)}" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>` : "" }
+        </div>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+/* ---------- filtrado (normalizado y robusto) ---------- */
+function aplicarFiltros(){
+  const cursoSel = normalizar(cursoFiltro ? cursoFiltro.value : "");
+  const tipoSel = normalizar(tipoFiltro ? tipoFiltro.value : "");
+
+  console.log("Aplicando filtros -> curso:", cursoSel || "todos", "tipo:", tipoSel || "todos");
+
+  const filtrados = portafolio.filter(item => {
+    const itemCurso = normalizar(item.curso);
+    const itemTipo = normalizar(item.tipo);
+
+    const cumpleCurso = (cursoSel === "" || cursoSel === "todos" || cursoSel === itemCurso);
+    const cumpleTipo = (tipoSel === "" || tipoSel === "todos" || tipoSel === itemTipo);
+
+    return cumpleCurso && cumpleTipo;
+  });
+
+  console.log("Resultados:", filtrados.length, "items");
+  mostrarPortafolio(filtrados);
+}
+
+/* ---------- listeners ---------- */
+if (cursoFiltro) cursoFiltro.addEventListener("change", aplicarFiltros);
+if (tipoFiltro) tipoFiltro.addEventListener("change", aplicarFiltros);
+if (destacadosBtn) destacadosBtn.addEventListener("click", () => mostrarPortafolio(portafolio.filter(x => x.destacado)));
+
+/* ---------- inicial ---------- */
+aplicarFiltros();

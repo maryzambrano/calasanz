@@ -1,0 +1,237 @@
+/* ---------------------------------------------------
+   ESTILOS GENERALES
+   --------------------------------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdf6e3; 
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #5c4033; 
+}
+
+/* ---------------------------------------------------
+   ENCABEZADO (Header)
+   --------------------------------------------------- */
+header {
+  background-image: url("./pergamino.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #5c4033; 
+  text-shadow: 1px 1px 2px #fff8ec; 
+}
+
+.frase-inicial {
+  font-style: italic;
+  color: #8b5e3c;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 1px #fff8ec;
+}
+
+/* ---------------------------------------------------
+   NAVEGACIÓN
+   --------------------------------------------------- */
+nav {
+  background-color: #8b5e3c; 
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff8ec;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+/* ---------------------------------------------------
+   SECCIONES GENERALES
+   --------------------------------------------------- */
+section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2 {
+  color: #5c4033;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------------------
+   SECCIÓN VALORES
+   --------------------------------------------------- */
+#valores {
+  background-color: rgba(232, 198, 154, 0.5);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* ---------------------------------------------------
+   TABLA DE FRASES
+   --------------------------------------------------- */
+#frases table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #fff8ec;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#frases th,
+#frases td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #d8c3a5;
+}
+
+#frases th {
+  background-color: #c0a060; 
+  color: #fffdf5;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#frases tr:hover {
+  background-color: #e3c9a8;
+  transition: background-color 0.3s ease;
+}
+
+/* ---------------------------------------------------
+   GALERÍA DE OBRAS
+   --------------------------------------------------- */
+#galeria .contenedor-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta-obra {
+  background-color: #fff8ec;
+  border: 1px solid #d8c3a5;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-obra:hover {
+  transform: scale(1.02);
+}
+
+.tarjeta-obra img {
+  width: 100%;
+  height: auto;
+}
+
+.info-obra {
+  padding: 1rem;
+}
+
+.info-obra h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #8b5e3c;
+}
+
+.info-obra p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------
+   PIE DE PÁGINA
+   --------------------------------------------------- */
+footer {
+  background-color: #8b5e3c;
+  color: #fff8ec;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: #fff8ec;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  margin: 0 0.5rem; 
+  font-size: 1.8rem; 
+  display: inline-block; 
+}
+
+footer a:hover {
+  color: gold;
+}
+
+/* ---------------------------------------------------
+   TRIVIA
+   --------------------------------------------------- */
+
+button {
+  background-color: #8b5e3c;
+  color: #fff8ec;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  color: gold;
+}
+
+#jugar-trivia {
+  text-align: center;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow: auto;
+}
+
+.modal-contenido {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cerrar:hover { color: black; }
+.correcta { color: green; }
+.incorrecta { color: red; }
+

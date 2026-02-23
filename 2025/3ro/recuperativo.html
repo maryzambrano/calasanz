@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Receta</title>
+  
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 20px;
+}
+
+header, footer {
+  text-align: center;
+  background-color: #eee;
+  padding: 10px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+ul, ol {
+  margin-left: 20px;
+}
+
+img {
+  display: block;
+  margin: 10px auto;
+  border: 2px solid #ccc;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#resultado {
+  margin-top: 15px;
+  
+  font-weight: bold;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Receta: Tarta de Manzana</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Ingredientes</h2>
+      <ul id="ingredientes">
+        <li>2 manzanas</li>
+        <li>200 g de harina</li>
+        <li>100 g de azúcar</li>
+        <li>50 g de manteca</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Procedimiento</h2>
+      <ol>
+        <li>Pelar y cortar las manzanas.</li>
+        <li>Mezclar harina, azúcar y manteca.</li>
+        <li>Agregar las manzanas y hornear 30 minutos.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Imagen de la receta</h2>
+      <img src="tarta.jpg" alt="Tarta de manzana" width="300">
+    </section>
+
+    <section>
+      <button onclick="calcularPorciones()">Calcular ingredientes por porciones</button>
+      <div id="resultado"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Alumno: Apellido, Nombre – Curso: 3°</p>
+  </footer>
+
+  <script>
+    function calcularPorciones() {
+  // Cantidades base para 2 porciones
+  let manzanas = 2;
+  let harina = 200;   // gramos
+  let azucar = 100;   // gramos
+  let manteca = 50;   // gramos
+
+  // Pedir al usuario la cantidad de porciones
+  const porciones = prompt("¿Cuántas porciones deseas preparar?");
+  const porcionesNum = parseInt(porciones);
+
+  if (isNaN(porcionesNum) || porcionesNum <= 0) {
+    alert("Por favor ingresa un número válido.");
+    return;
+  }
+
+  // Calcular nuevas cantidades (regla de tres simple)
+  let manzanasCalc = (manzanas / 2) * porcionesNum;
+  let harinaCalc   = (harina / 2) * porcionesNum;
+  let azucarCalc   = (azucar / 2) * porcionesNum;
+  let mantecaCalc  = (manteca / 2) * porcionesNum;
+
+  // Mostrar resultado en la página
+  let resultadoHTML = "<h3>Ingredientes ajustados para " + porcionesNum + " porciones:</h3>";
+  
+  resultadoHTML += "Manzanas: " + manzanasCalc + "<br>";
+  resultadoHTML += "Harina: " + harinaCalc + "<br>";
+  resultadoHTML += "Azúcar: " + azucarCalc + "<br>";
+  resultadoHTML += "Manteca: " + mantecaCalc;
+  
+  document.getElementById("resultado").innerHTML = resultadoHTML;
+}
+  </script>
+</body>
+</html>
