@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Electricidad básica y práctica con Arduino + S4A | 2º año de Informática</title>
+  <meta name="description" content="Clase sobre electricidad (corriente, tensión, resistencia, cortocircuito), práctica con circuitos en serie y en paralelo usando Arduino UNO y S4A, desafío de semáforo peatonal y consignas de investigación." />
+  <style>
+    :root{
+      --bg:#0f172a;          /* slate-900 */
+      --fg:#e2e8f0;          /* slate-200 */
+      --muted:#94a3b8;       /* slate-400 */
+      --card:#111827;        /* gray-900 */
+      --accent:#22d3ee;      /* cyan-400 */
+      --accent-2:#a78bfa;    /* violet-400 */
+      --ok:#10b981;          /* emerald-500 */
+      --warn:#f59e0b;        /* amber-500 */
+      --danger:#ef4444;      /* red-500 */
+      --link:#38bdf8;        /* sky-400 */
+      --border:#1f2937;      /* gray-800 */
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%}
+    body{
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background:radial-gradient(1200px 600px at 80% -20%, rgba(34,211,238,.08), transparent),
+                 radial-gradient(900px 500px at -10% 10%, rgba(167,139,250,.08), transparent),
+                 var(--bg);
+      color:var(--fg);
+      line-height:1.6;
+    }
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      padding:2.5rem 1.25rem 1rem;
+      text-align:center;
+    }
+    .title{
+      font-size:clamp(1.4rem, 2.6vw, 2.2rem);
+      margin:0 0 .25rem;
+      letter-spacing:.2px;
+    }
+    .subtitle{color:var(--muted);margin:0}
+    main{max-width:950px;margin:0 auto;padding:1rem 1.25rem 3rem}
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:1.25rem 1.25rem 1rem;
+      box-shadow:0 10px 25px rgba(0,0,0,.25);
+      margin:1rem 0 1.25rem;
+    }
+
+    h2{font-size:clamp(1.2rem,2.2vw,1.6rem);margin:.25rem 0 .5rem}
+    h3{font-size:1.05rem;margin:1rem 0 .35rem;color:#e5e7eb}
+    p, li{font-size:1rem}
+
+    .grid{
+      display:grid;gap:1rem;
+      grid-template-columns:1fr;
+    }
+    @media (min-width:900px){
+      .grid{grid-template-columns:1fr 1fr}
+    }
+
+    .def-list{display:grid;grid-template-columns: 1fr 2.5fr;gap:.25rem .75rem}
+    .def-list dt{color:var(--accent);font-weight:600}
+    .def-list dd{margin:0}
+
+    .note, .warning, .success{
+      border-left:4px solid var(--accent);
+      padding:.75rem .9rem;margin:.75rem 0;border-radius:10px;background:rgba(34,211,238,.06)
+    }
+    .warning{border-color:var(--warn);background:rgba(245,158,11,.08)}
+    .success{border-color:var(--ok);background:rgba(16,185,129,.08)}
+
+    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background:#0b1220;border:1px solid var(--border);padding:.1rem .4rem;border-radius:6px}
+
+    .compare{width:100%;border-collapse:collapse;overflow:hidden;border-radius:14px;border:1px solid var(--border)}
+    .compare th,.compare td{padding:.6rem .7rem;border-bottom:1px solid var(--border);vertical-align:top}
+    .compare thead th{background:#0b1220;color:#cbd5e1;text-align:left}
+
+    figure{margin:0}
+    figure figcaption{font-size:.9rem;color:var(--muted);margin-top:.35rem}
+
+    footer{max-width:950px;margin:2rem auto 4rem;padding:0 1.25rem;color:var(--muted);font-size:.95rem}
+    .hr{height:1px;background:var(--border);border:0;margin:1.2rem 0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="title">Electricidad básica y práctica con Arduino + S4A</h1>
+    <p class="subtitle">2º año de Informática · Clase con analogías, práctica en laboratorio y desafío final</p>
+  </header>
+
+  <main>
+    <!-- Discurso inicial -->
+    <section class="card" id="discurso-inicial">
+      <h2>Introducción (discurso para el aula)</h2>
+      <p>Hoy exploraremos conceptos fundamentales de la electricidad que utilizamos a diario en informática y tecnología. Para facilitar la comprensión, utilizaremos una analogía con el agua:</p>
+      <dl class="def-list">
+        <dt>Corriente eléctrica</dt>
+        <dd>Se asemeja al <em>flujo</em> de agua en una manguera: representa el desplazamiento de cargas eléctricas a través de un conductor.</dd>
+        <dt>Tensión (voltaje)</dt>
+        <dd>Es la <em>presión</em> que impulsa la corriente, análoga a la presión del agua que empuja para que fluya.</dd>
+        <dt>Resistencia</dt>
+        <dd>Es la <em>oposición</em> al paso de la corriente; similar al grosor de la manguera: cuanto más angosta, más difícil el flujo.</dd>
+        <dt>Cortocircuito</dt>
+        <dd>Un camino sin resistencia entre polos. En la analogía, sería un agujero grande por el que el agua se escapa de golpe, generando riesgo de daño.</dd>
+      </dl>
+      <div class="note">
+        <strong>Preguntas guía para fomentar la participación:</strong>
+        <ul>
+          <li>¿Qué ocurre si abrimos al máximo la canilla? ¿Cómo cambia el flujo?</li>
+          <li>Si presionamos la salida de la manguera con el dedo, ¿la presión aumenta o disminuye? ¿Con qué concepto eléctrico lo relacionamos?</li>
+          <li>¿Qué podría suceder si unimos directamente el polo positivo con el negativo sin componentes intermedios?</li>
+        </ul>
+      </div>
+      <p class="warning"><strong>Seguridad primero:</strong> utilizaremos <span class="kbd">resistencias limitadoras</span> con los LEDs y verificaremos conexiones <em>antes</em> de energizar la placa.</p>
+    </section>
+
+    <!-- Consigna de práctica -->
+    <section class="card" id="consignas-practica">
+      <h2>Práctica en laboratorio: circuitos con Arduino UNO y S4A</h2>
+      <p>Trabajaremos con dos LEDs y construiremos dos configuraciones diferentes. Controlaremos su encendido desde <strong>S4A (Scratch for Arduino)</strong> utilizando salidas digitales de la <strong>Arduino UNO</strong>.</p>
+
+      <div class="grid">
+        <article class="card" style="margin:0">
+          <h3>1) Circuito en serie</h3>
+          <ol>
+            <li>Conecta dos LEDs <em>uno a continuación del otro</em> en el mismo camino de corriente.</li>
+            <li>Incluye una resistencia limitadora adecuada para proteger los LEDs.</li>
+            <li>Asocia el cátodo común a <em>GND</em> y el ánodo al pin digital elegido.</li>
+            <li>Controla el encendido desde S4A con bloques de salida digital.</li>
+          </ol>
+          <figure>
+            <!-- Inserta aquí la imagen del circuito en serie -->
+            <img src="" alt="(Imagen del circuito en serie con dos LEDs)" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;background:#0b1220;aspect-ratio:16/9;object-fit:cover"/>
+            <figcaption>Esquema referencial del circuito en serie (docente agrega la imagen).</figcaption>
+          </figure>
+        </article>
+
+        <article class="card" style="margin:0">
+          <h3>2) Circuito en paralelo</h3>
+          <ol>
+            <li>Conecta los dos LEDs en ramas independientes compartiendo la misma tensión.</li>
+            <li>Coloca una resistencia limitadora <em>para cada LED</em>.</li>
+            <li>Conecta los cátodos a <em>GND</em> y cada ánodo a un pin digital diferente.</li>
+            <li>Programa en S4A el control independiente de cada LED.</li>
+          </ol>
+          <figure>
+            <!-- Inserta aquí la imagen del circuito en paralelo -->
+            <img src="" alt="(Imagen del circuito en paralelo con dos LEDs)" style="width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:12px;background:#0b1220;aspect-ratio:16/9;object-fit:cover"/>
+            <figcaption>Esquema referencial del circuito en paralelo (docente agrega la imagen).</figcaption>
+          </figure>
+        </article>
+      </div>
+
+      <h3>Comparación rápida</h3>
+      <table class="compare" aria-label="Comparación entre serie y paralelo">
+        <thead>
+          <tr>
+            <th>Aspecto</th>
+            <th>Serie</th>
+            <th>Paralelo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ruta de la corriente</td>
+            <td>Única ruta; un componente tras otro.</td>
+            <td>Múltiples rutas; ramas independientes.</td>
+          </tr>
+          <tr>
+            <td>Efecto si un LED falla</td>
+            <td>Se interrumpe todo el circuito.</td>
+            <td>La otra rama sigue funcionando.</td>
+          </tr>
+          <tr>
+            <td>Brillo de los LEDs</td>
+            <td>Tiende a disminuir al compartir corriente.</td>
+            <td>Más uniforme; cada LED recibe su corriente.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Desafío -->
+    <section class="card" id="desafio-semaforo">
+      <h2>Desafío: semáforo peatonal con S4A</h2>
+      <p>Implemente un semáforo peatonal controlado por la Arduino UNO desde S4A, con dos luces:</p>
+      <ul>
+        <li><strong>LED rojo → pin 10</strong></li>
+        <li><strong>LED verde → pin 11</strong></li>
+      </ul>
+      <div class="note">
+        <p>Utilice <em>máscaras / disfraces</em> en S4A para representar visualmente los estados del semáforo (encendido/apagado) en la escena.</p>
+      </div>
+      <h3>Criterios mínimos de funcionamiento</h3>
+      <ol>
+        <li>Secuencia correcta: <em>Rojo</em> (detener) → <em>Verde</em> (cruzar) → <em>Rojo</em> (detener).</li>
+        <li>Temporizaciones razonables (por ejemplo, 5&nbsp;s en verde y 5&nbsp;s en rojo).</li>
+        <li>No debe haber estados simultáneos incorrectos (ambas luces encendidas).</li>
+      </ol>
+      <p class="success"><strong>Sugerencia:</strong> documente la solución con una captura de pantalla de los bloques y una foto del prototipo.</p>
+    </section>
+
+    <!-- Investigación para casa -->
+    <section class="card" id="tarea-investigacion">
+      <h2>Trabajo para la casa: investigación teórica</h2>
+      <p>Responda en su carpeta con definiciones claras, unidades de medida y al menos un ejemplo propio por concepto:</p>
+      <ol>
+        <li>¿Qué es la <strong>electricidad</strong> y de qué maneras puede generarse?</li>
+        <li>Defina <strong>corriente eléctrica</strong> e indique su unidad de medida.</li>
+        <li>Explique <strong>tensión (voltaje)</strong> y su unidad de medida.</li>
+        <li>Defina <strong>resistencia eléctrica</strong> e incluya la ley de Ohm de forma simbólica.</li>
+        <li>¿Qué es un <strong>cortocircuito</strong>? Describa riesgos y buenas prácticas de prevención.</li>
+        <li>Compare <strong>circuito en serie</strong> vs. <strong>circuito en paralelo</strong> con un ejemplo cotidiano.</li>
+        <li>Mencione tres dispositivos del hogar o la escuela que dependan de circuitos eléctricos y clasifíquelos (cuando corresponda).</li>
+      </ol>
+      <div class="warning"><strong>Entrega:</strong> próximo encuentro. Se valorará claridad, precisión técnica, esquema y referencias.</div>
+    </section>
+
+    <div class="hr"></div>
+
+    <section class="card" id="material-docente">
+      <h2>Material para el docente (no visible para estudiantes si se oculta en CSS)</h2>
+      <ul>
+        <li><strong>Recurso visual:</strong> agrege imágenes de los esquemas de serie y paralelo en los <code>&lt;img&gt;</code> de cada figura.</li>
+        <li><strong>S4A:</strong> utilice bloques de salida digital para los pines y disfraces para el feedback visual.</li>
+        <li><strong>Seguridad:</strong> siempre incluya resistencias para cada LED y verifique la polaridad antes de energizar.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Publicado en la página del curso · © Docente de Informática
+  </footer>
+</body>
+</html>
