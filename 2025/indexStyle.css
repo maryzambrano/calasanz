@@ -1,0 +1,256 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    max-width: 1200px;
+    min-width: 500px;
+    padding: 0px;
+}
+
+header {
+    text-align: center;
+    padding: 0px;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #800000;    
+}
+
+nav a {
+    color: white !important;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: black;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.navbar-toggler {
+    border-color: white; /* Cambia el borde del botón a blanco */
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* Invierte los colores, haciendo el ícono blanco */
+}
+
+.dropdown-menu {
+    background-color: white;
+}
+
+.dropdown-menu a {
+    color: black !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: black !important;
+    color: white !important;
+}
+
+main {
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+    max-width: 300px;
+    width: 100%;
+}
+
+.card a {
+    color:#800000
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.calendar {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    background-color:#cac9c9;
+    padding: 30px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-days, .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.calendar-day {
+    font-weight: bold;
+}
+
+.calendar-date {
+    padding: 10px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.calendar-date:hover {
+    background-color: #f0f0f0;
+}
+
+.calendar-date.event-efemerides {
+    background-color: #f1ce08;
+    color: black;
+}
+
+.calendar-date.event-evaluaciones {
+    background-color: #556B2F;
+    color: white;
+}
+
+.calendar-date.event-otros {
+    background-color: #000080;
+    color: white;
+}
+
+.btn-primary {
+    background-color: #800000;
+    border-color:#800000; 
+    color: #ffffff; 
+}
+.enlace {
+    color:black
+}
+
+.actividad {
+      background-color: #cac9c9;
+      padding: 10px;
+      border-left: 4px solid  #800000;
+    }
+/*button:hover {
+    background-color: black;
+}*/
+
+.btn-primary:hover {
+    background-color: black;
+}
+
+#steam, #informatica, #caratula {
+    background-color: #f0f0f0;
+}
+
+#caratula, #cartelera, #temas {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#cartelera {
+    /*background-color: #f9f9f900;*/
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cartelera img {
+    max-width: 100%;
+    height: auto;
+}
+
+#caratula a {
+    /*display: inline-block;*/
+    margin: 10px;
+    text-align: center;
+}
+.listaTema a {
+    color: black;
+    
+}
+
+.listaTema li {
+    list-style-type: none;
+
+
+}
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #e0dcd5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tabla th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+footer {
+    background-color: #800000;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer, a {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    #caratula a {
+        /*display: block;*/
+        width: 100%;
+    }
+}
