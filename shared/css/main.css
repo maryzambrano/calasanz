@@ -1,0 +1,72 @@
+.hero-section {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  min-height: 40vh;
+}
+
+.primaria-card {
+  background: #f8f9ff;
+}
+
+.secundaria-card {
+  background: #f1f3f5;
+}
+
+.card {
+  border-radius: 15px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.month h5 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.month {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.day-name {
+  font-weight: 600;
+  text-align: center;
+}
+
+.day {
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 6px;
+}
+
+.feriado { background: #dc3545; color: white; }
+.puente { background: #ffc107; }
+.institucional { background: #198754; color: white; }
+.receso { background: #0dcaf0; }
+.evaluacion { background: #0d6efd; color: white; }
+
+
+
+
+
+
