@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificación de Mecanismos</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f0f8ff; }
+        .images-container { display: flex; flex-wrap: wrap; justify-content: center; border: 2px dashed #333; padding: 10px; background-color: #fff; margin: 20px auto; max-width: 800px; }
+        .dropzone { border: 2px dashed #333; background-color: #e6f7ff; padding: 20px; width: 220px; min-height: 150px; margin: 10px; }
+        .draggable { width: 100px; cursor: grab; margin: 5px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .column { display: flex; flex-direction: column; align-items: center; }
+        .button-container { margin-top: 20px; }
+        button { padding: 10px 15px; font-size: 16px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px; margin: 5px; }
+        button:hover { background-color: #45a049; }
+        #resultado { font-size: 18px; font-weight: bold; margin-top: 20px; }
+        .correcto { color: green; animation: bounce 1s ease infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    </style>
+</head>
+<body>
+    <h2>Clasificación de los Mecanismos</h2>
+    <p>Arrastra las imágenes a la categoría correcta.</p>
+    
+    <div class="images-container" id="images">
+        <img src="./leva.png" class="draggable" draggable="true" id="trans_circ_alt2">
+        <img src="./polea.png" class="draggable" draggable="true" id="trans_lin2">
+        <img src="./palanca.png" class="draggable" draggable="true" id="trans_lin1">
+        <img src="./tornilloSinFin.png" class="draggable" draggable="true" id="trans_circ2">
+        <img src="./engranajes.jpg" class="draggable" draggable="true" id="trans_circ1">
+        <img src="./piñonCremallera.jpg" class="draggable" draggable="true" id="trans_circ_rect">
+        <img src="./bielaManivela.jpg" class="draggable" draggable="true" id="trans_circ_alt1">   
+    </div>
+    
+    <div class="container">
+        <div class="column">
+            <h3>Transmisión Lineal</h3>
+            <div class="dropzone" id="transmision_lineal"></div>
+        </div>
+        <div class="column">
+            <h3>Transmisión Circular</h3>
+            <div class="dropzone" id="transmision_circular"></div>
+        </div>
+        <div class="column">
+            <h3>Transformación Circular a Rectilíneo</h3>
+            <div class="dropzone" id="transformacion_circular_rectilineo"></div>
+        </div>
+        <div class="column">
+            <h3>Transformación Circular a Rectilíneo Alternativo</h3>
+            <div class="dropzone" id="transformacion_circular_alternativo"></div>
+        </div>
+    </div>
+    
+    <div class="button-container">
+        <button onclick="verificarRespuestas()">Verificar</button>
+        <button onclick="reiniciar()">Reiniciar</button>
+    </div>
+    <p id="resultado"></p>
+    
+    <script>
+        document.querySelectorAll('.draggable').forEach(img => {
+            img.addEventListener('dragstart', event => {
+                event.dataTransfer.setData('id', event.target.id);
+            });
+        });
+        
+        document.querySelectorAll('.dropzone').forEach(zone => {
+            zone.addEventListener('dragover', event => {
+                event.preventDefault();
+            });
+            
+            zone.addEventListener('drop', event => {
+                event.preventDefault();
+                const id = event.dataTransfer.getData('id');
+                const img = document.getElementById(id);
+                if (!zone.contains(img)) {
+                    zone.appendChild(img);
+                }
+            });
+        });
+
+        function verificarRespuestas() {
+            const respuestasCorrectas = {
+                transmision_lineal: ["trans_lin1", "trans_lin2"],
+                transmision_circular: ["trans_circ1", "trans_circ2"],
+                transformacion_circular_rectilineo: ["trans_circ_rect"],
+                transformacion_circular_alternativo: ["trans_circ_alt1", "trans_circ_alt2"]
+            };
+
+            let correcto = true;
+            for (let key in respuestasCorrectas) {
+                let zona = document.getElementById(key);
+                let elementos = Array.from(zona.children).map(img => img.id);
+                if (JSON.stringify(elementos.sort()) !== JSON.stringify(respuestasCorrectas[key].sort())) {
+                    correcto = false;
+                }
+            }
+
+            let resultado = document.getElementById("resultado");
+            if (correcto) {
+                resultado.innerText = "¡Felicidades! Has clasificado correctamente los mecanismos.";
+                resultado.classList.add("correcto");
+            } else {
+                resultado.innerText = "Algunas respuestas son incorrectas. Repasa la clase e inténtalo de nuevo.";
+                resultado.classList.remove("correcto");
+            }
+        }
+
+        function reiniciar() {
+            document.querySelectorAll('.dropzone').forEach(zone => {
+                while (zone.firstChild) {
+                    document.getElementById("images").appendChild(zone.firstChild);
+                }
+            });
+            let resultado = document.getElementById("resultado");
+            resultado.innerText = "";
+            resultado.classList.remove("correcto");
+        }
+    </script>
+</body>
+</html>
