@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informática 2°</title>
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../indexStyle.css">
+</head>
+<body>
+    <header>
+        <img src="../imgs/CICLO ESCOLAR 2025.png">  
+    </header>
+    <!--BARRA DE NAVEGACIÓN-->
+    <nav class="navbar navbar-expand-lg bg-body-primary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html"><i class="bi bi-house-fill"></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" 
+                            href="#" role="button" 
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">
+                            Informática
+                        </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../Temas1.html">1° Año</a></li>
+                        <li><a class="dropdown-item" href="../Temas2.html">2° Año</a></li>
+                        <li><a class="dropdown-item" href="../Temas3.html">3° Año</a></li>
+                    </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../1ero/materiales.pdf" target="_blank">Materiales</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding: 20px;">
+        <h3>Programación con Scratch For Arduino</h3>
+        <p>La programación en bloques con S4A consiste en utilizar un entorno visual, basado en Scratch, que permite crear programas mediante piezas gráficas que encajan entre sí como un rompecabezas, facilitando el control de placas Arduino y el desarrollo de proyectos interactivos sin necesidad de escribir código en lenguajes textuales.</p>
+        <p>Los comandos de  Scratch se dividen en ocho categorías con las que se pueden insertar y controlar sonidos, imágenes, variables y otros elementos. Para crear un programa en Scratch sólo hay que arrastrar los elementos multimedia el escenario y añadir comandos en la pestaña Programas.</p>
+        <img src="../imgs/bloquesS4A.png" class="img-fluid mx-auto" >
+        <br><br>
+        <p>Para saber la función de cada bloque de código, puedes visitar la siguiente página: <a href="https://aprendiendoarduino.wordpress.com/2017/09/06/programacion-visual-con-scratch/" target="_blank" class="enlace">aprendiendoarduino</a></p>
+        <h4>Práctica N° 1: Salidas Digitales</h4>
+        <p>Programar en S4A un <strong>dado digital</strong> que genere un número al azar entre 1 y 6 y lo muestre con LEDs, simulando un dado real.</p>
+        <h5>Pasos a seguir:</h5>
+        <ol>
+            <li>Armar el circuito en la protoboard como en el <a href="../imgs/dado.png" target="_blank" class="enlace">modelo</a>.</li>
+            <li>Para realizar la programación, declarar una variable llamada <em>numero</em>.</li>
+            <li>Usar el bloque <em>número al azar entre 1 y 6</em>.</li>
+            <li>Programar condicionales para encender LEDs según el valor de <em>numero</em>.</li>
+            <li>Iniciar el programa con el bloque <em>al presionar bandera verde</em>.</li>
+            <li>Detenerlo con el bloque <em>al presionar tecla espacio → detener todo</em>.</li>
+            <li>Diseñar los disfraces como un dado tradicional.</li>
+            <li>Completar el formato: <a href="../2do/formatoS4A.docx" class="enlace">Práctica 1</a> y subirlo a la carpeta S4A de tu DRIVE.</li>
+        </ol>
+        <h5>Desafío de mejora:</h5>
+        <p>Actualmente, el dado se inicia con la <strong>bandera verde</strong> y se detiene con la <strong>barra espaciadora</strong>. 
+        El desafío es lograr que al presionar nuevamente la barra espaciadora el dado vuelva a lanzarse sin necesidad de tocar la bandera verde.</p>
+        <p><strong>Pista:</strong> crea una nueva variable (por ejemplo <em>estado</em>) que alterne entre <em>activo</em> y <em>pausado</em>. Usa condicionales para que el bucle solo ejecute el dado cuando el estado sea <em>activo</em>.</p>
+
+   
+        
+    </main>
+
+    <footer>
+        <p>Esta página está diseñada con fines informativos, cualquier comunicación debe realizarse a través de los medios establecidos por el <a href="https://colegiocalasanz.edu.ar/" target="_blank">Colegio Calasanz</a></p>
+    </footer>
+
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>
