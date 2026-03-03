@@ -65,7 +65,13 @@
 .receso { background: #0dcaf0; }
 .evaluacion { background: #0d6efd; color: white; }
 
+.curso-header {
+  background: linear-gradient(135deg, #212529, #495057);
+}
 
+.curso-header-primaria {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+}
 
 
 
