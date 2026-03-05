@@ -90,3 +90,222 @@
   color: #0d6efd;
   min-height: 30px; /* evita saltos */
 }
+
+/* ============================
+   MODAL CUMPLEAÑOS
+============================ */
+
+.modal{
+  display:none;                 /* oculto por defecto */
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.55);
+
+  justify-content:center;
+  align-items:center;
+
+  z-index:9999;
+}
+
+/* cuando se activa */
+.modal.show{
+  display:flex;
+}
+
+/* ============================
+   CONTENIDO DEL MODAL
+============================ */
+
+.modal-content{
+
+  background:white;
+  padding:35px 30px;
+  border-radius:16px;
+
+  width:90%;
+  max-width:420px;
+
+  text-align:center;
+  position:relative;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+  animation:modalEntrada 0.4s ease;
+}
+
+/* animación de entrada */
+
+@keyframes modalEntrada{
+  from{
+    transform:scale(0.8);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+/* ============================
+   TITULO
+============================ */
+
+.modal-content h2{
+  font-size:26px;
+  margin-bottom:15px;
+  color:#ff6b6b;
+}
+
+/* ============================
+   TEXTO CUMPLE
+============================ */
+
+#cumpleTexto{
+  font-size:20px;
+  font-weight:bold;
+  color:#333;
+}
+
+/* ============================
+   BOTON CERRAR
+============================ */
+
+.close{
+
+  position:absolute;
+  right:15px;
+  top:10px;
+
+  font-size:26px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  color:#888;
+
+  transition:0.2s;
+}
+
+.close:hover{
+  color:#ff4d4d;
+  transform:scale(1.2);
+}
+
+/* ============================
+   CONFETTI
+============================ */
+
+#confetti-container{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.confetti{
+
+  position:absolute;
+  width:8px;
+  height:12px;
+
+  opacity:0.9;
+
+  animation:confettiFall linear forwards;
+}
+
+@keyframes confettiFall{
+
+  0%{
+    transform:translateY(-20px) rotate(0deg);
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(500px) rotate(360deg);
+    opacity:0;
+  }
+
+}
+
+/* ============================
+   GLOBOS
+============================ */
+
+#balloons-container{
+  position:absolute;
+  bottom:-20px;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+
+.balloon{
+
+  position:absolute;
+
+  width:35px;
+  height:45px;
+
+  border-radius:50%;
+
+  animation:balloonUp linear forwards;
+}
+
+.balloon::after{
+
+  content:"";
+
+  position:absolute;
+
+  bottom:-12px;
+  left:50%;
+
+  width:2px;
+  height:14px;
+
+  background:#666;
+
+  transform:translateX(-50%);
+}
+
+@keyframes balloonUp{
+
+  0%{
+    transform:translateY(100px);
+    opacity:0;
+  }
+
+  20%{
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(-400px);
+    opacity:0;
+  }
+
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width:600px){
+
+  .modal-content{
+    padding:25px;
+  }
+
+  #cumpleTexto{
+    font-size:18px;
+  }
+
+}
