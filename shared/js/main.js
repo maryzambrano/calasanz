@@ -182,4 +182,147 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+// =============================
+// Cumpleañeros de la semana
+// =============================
 
+document.addEventListener("DOMContentLoaded", function () {
+
+  const gradoPagina = document.body.dataset.grado;
+
+  // Si la página no tiene grado (ej: index) no hace nada
+  if (!gradoPagina) return;
+
+  // =============================
+  // Cargar cumpleaños
+  // =============================
+
+  fetch("../../shared/data/cumpleanios.json")
+    .then(response => response.json())
+    .then(data => {
+
+      const hoy = new Date();
+
+      const inicioSemana = new Date(hoy);
+      inicioSemana.setDate(hoy.getDate() - hoy.getDay());
+
+      const finSemana = new Date(inicioSemana);
+      finSemana.setDate(inicioSemana.getDate() + 6);
+
+      const cumpleSemana = data.filter(c => {
+
+        if (c.grado !== gradoPagina) return false;
+
+        const fechaCumple = new Date(hoy.getFullYear(), c.mes - 1, c.dia);
+
+        return fechaCumple >= inicioSemana && fechaCumple <= finSemana;
+
+      });
+
+      // Si no hay cumpleaños NO mostrar modal
+      if (cumpleSemana.length === 0) return;
+
+      const nombres = cumpleSemana.map(c => c.nombre).join(", ");
+
+      abrirModalCumple(nombres);
+
+    })
+
+    .catch(error => {
+      console.error("Error cargando cumpleaños:", error);
+    });
+
+});
+
+
+// =============================
+// Abrir Modal
+// =============================
+
+function abrirModalCumple(nombres) {
+
+  if (!nombres) return;
+
+  const modal = document.getElementById("cumpleModal");
+  const texto = document.getElementById("cumpleTexto");
+  const cerrar = document.querySelector(".close");
+
+  if (!modal || !texto) return;
+
+  texto.innerHTML = `🎉 ${nombres}`;
+
+  modal.style.display = "flex";
+
+  lanzarConfetti();
+  lanzarGlobos();
+
+  // cerrar botón
+  cerrar.onclick = () => modal.style.display = "none";
+
+  // cerrar clic fuera
+  modal.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+
+  // cerrar con ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") modal.style.display = "none";
+  });
+
+}
+
+
+// =============================
+// Confetti
+// =============================
+
+function lanzarConfetti() {
+
+  const container = document.getElementById("confetti-container");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  const colores = ["#ff4d4d","#ffd24d","#4dd2ff","#7dff7d","#ff66ff"];
+
+  for (let i = 0; i < 40; i++) {
+
+    const confetti = document.createElement("div");
+    confetti.className = "confetti";
+
+    confetti.style.left = Math.random() * 100 + "%";
+    confetti.style.background = colores[Math.floor(Math.random()*colores.length)];
+    confetti.style.animationDuration = (2 + Math.random()*2) + "s";
+
+    container.appendChild(confetti);
+  }
+
+}
+
+
+// =============================
+// Globos
+// =============================
+
+function lanzarGlobos() {
+
+  const container = document.getElementById("balloons-container");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  const colores = ["#ff6b6b","#6bc5ff","#ffd93d","#8aff8a","#ff9bf2"];
+
+  for (let i = 0; i < 6; i++) {
+
+    const balloon = document.createElement("div");
+    balloon.className = "balloon";
+
+    balloon.style.left = (10 + Math.random()*80) + "%";
+    balloon.style.background = colores[Math.floor(Math.random()*colores.length)];
+    balloon.style.animationDuration = (5 + Math.random()*3) + "s";
+
+    container.appendChild(balloon);
+  }
+
+}
