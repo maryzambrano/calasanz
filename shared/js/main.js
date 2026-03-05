@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const year = 2026;
-  let currentMonth = 0;
+  let currentMonth = new Date().getMonth();
 
   const meses = [
     "Enero","Febrero","Marzo","Abril","Mayo","Junio",
@@ -246,5 +246,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   renderMonth(currentMonth);
+
 
 });
