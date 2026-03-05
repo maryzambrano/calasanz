@@ -2,26 +2,111 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Prof. Mary</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calasanz 2026</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="../shared/css/main.css">
 </head>
-<body class="bg-light">
+<body>
 
-<div class="container py-5">
-  <h1 class="mb-4">STEAM & Informática - Colegio Calasanz</h1>
-  <p class="text-muted">Historial de ciclos lectivos</p>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Ciclo Lectivo 2026</a>
+  </div>
+</nav>
 
-  <div class="list-group">
-    <a href="./2026/" class="list-group-item list-group-item-action">
-      Ciclo 2026
-    </a>
+<!-- HERO -->
+<section class="hero-section text-center text-white d-flex align-items-center">
+  <div class="container">
+    <h1 class="display-5 fw-bold">Espacio digital de STEAM e Informática</h1>
+    <p class="lead mt-3">Prof. Marynellis Zambrano V.</p>
   </div>
-  <div class="list-group">
-    <a href="./2025/" class="list-group-item list-group-item-action">
-      Ciclo 2025
-    </a>
-  </div>
+</section>
+
+<!-- CALENDARIO -->
+<section class="container py-5">
+  <h2 class="text-center mb-4">📅 Calendario 2026</h2>
+
+  <div class="d-flex justify-content-center gap-3 flex-wrap">
+  <span class="badge feriado">Feriado</span>
+  <span class="badge puente">Puente</span>
+  <span class="badge institucional">Institucional</span>
+  <span class="badge bimestre">Bimestre</span>
+  <span class="badge receso">Receso</span>
+  <span class="badge religioso">Religioso</span>
 </div>
+
+  <div class="calendar-wrapper text-center">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <button class="btn btn-outline-dark" id="prevMonth">◀</button>
+      <h4 id="monthTitle" class="mb-0"></h4>
+      <button class="btn btn-outline-dark" id="nextMonth">▶</button>
+    </div>
+
+    <div id="calendar-2026" class="month"></div>
+    <div id="eventoInfo" class="mt-4 text-center fw-bold"></div>
+
+  </div>
+</section>
+
+<!-- NIVELES -->
+<section class="container py-5">
+  <h2 class="text-center mb-5">Niveles</h2>
+
+  <div class="row g-4">
+
+    <!-- PRIMARIA -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow border-0 primaria-card">
+        <div class="card-body text-center">
+          <h3 class="card-title">🚀 STEAM - Primaria</h3>
+          <p class="text-muted">De 1° a 6° grado</p>
+
+          <div class="d-grid gap-2 mt-4">
+            <a href="../shared/image/PagConstruccion.jpg" class="btn btn-primary">1° Grado</a>
+            <a href="../shared/image/PagConstruccion.jpg" class="btn btn-primary">2° Grado</a>
+            <a href="../shared/image/PagConstruccion.jpg" class="btn btn-primary">3° Grado</a>
+            <a href="../shared/image/PagConstruccion.jpg" class="btn btn-primary">4° Grado</a>
+            <a href="./primaria/5grado.html" class="btn btn-primary">5° Grado</a>
+            <a href="./primaria/6grado.html" class="btn btn-primary">6° Grado</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECUNDARIA -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow border-0 secundaria-card">
+        <div class="card-body text-center">
+          <h3 class="card-title">💻 Informática - Secundaria</h3>
+          <p class="text-muted">De 1° a 3° año</p>
+
+          <div class="d-grid gap-2 mt-4">
+            <a href="./secundaria/1año.html" class="btn btn-dark">1° Año</a>
+            <a href="../shared/image/PagConstruccion.jpg" class="btn btn-dark">2° Año</a>
+            <a href="../shared/image/PagConstruccion.jpg" class="btn btn-dark">3° Año</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3">
+  <small>© 2026 - STEAM & Informática</small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="../shared/js/main.js"></script>
 
 </body>
 </html>
