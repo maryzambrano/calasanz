@@ -20,6 +20,11 @@
   transform: translateY(-5px);
 }
 
+
+/* ============================
+   CALENDARIO
+   ============================= */
+
 .calendar-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -59,6 +64,38 @@
   border-radius: 6px;
 }
 
+/* =========================
+   BIBLIOTECA DIGITAL
+========================= */
+
+.biblioteca h2{
+  font-weight:700;
+}
+
+.recurso-card{
+  transition: transform .25s ease, box-shadow .25s ease;
+  border-radius:12px;
+}
+
+.recurso-card:hover{
+  transform: translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.recurso-img{
+  height:160px;
+  object-fit:contain;
+  padding:15px;
+  background:#f8f9fa;
+}
+
+.recurso-card .btn{
+  margin-top:10px;
+}
+  
+
+/* colores para eventos */
+
 .curso-header {
   background: linear-gradient(135deg, #212529, #495057);
 }
@@ -66,15 +103,6 @@
 .curso-header-primaria {
   background: linear-gradient(135deg, #0d6efd, #6610f2);
 }
-
-.valor-destacado { background-color: #198754; }
-.valor-avanzado { background-color: #0d6efd; }
-.valor-alcanzado { background-color: #6c757d; }
-.valor-proceso { background-color: #ffc107; color: black; }
-.valor-no { background-color: #dc3545; }
-
-
-
 
 .feriado { background: #dc3545; color: white; }
 .puente { background: #ffc107; }
