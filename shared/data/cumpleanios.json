@@ -1,9 +1,7 @@
 [
- { "grado":"P6", "nombre":"Lucía", "dia":5, "mes":3 },
- { "grado":"P6", "nombre":"Mateo", "dia":4, "mes":3 },
- { "grado":"P5", "nombre":"Mario", "dia":5, "mes":3 },
- { "grado":"S1", "nombre":"Sofía", "dia":10, "mes":3 },
- { "grado":"S1", "nombre":"Valentina", "dia":11, "mes":3 },
- { "grado":"S1", "nombre":"Tomás", "dia":10, "mes":3 },
- { "grado":"S1", "nombre":"Juana", "dia":6, "mes":3 }
+ { "grado":"P6", "nombre":"Lucía", "dia":5, "mes":1 },
+ { "grado":"P6", "nombre":"Mateo", "dia":4, "mes":1 },
+ { "grado":"S1", "nombre":"Sofía", "dia":10, "mes":1 },
+ { "grado":"S1", "nombre":"Valentina", "dia":11, "mes":1 }
+ 
 ]
