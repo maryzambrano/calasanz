@@ -37,7 +37,7 @@ function iniciarCalendario() {
 
   let eventos = {};
 
-  fetch("../../shared/data/calendario2026.json")
+  fetch("../shared/data/calendario2026.json")
     .then(res => res.json())
     .then(data => {
 
@@ -294,5 +294,6 @@ function lanzarGlobos() {
   }
 
 }
+
 
 
