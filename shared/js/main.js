@@ -166,7 +166,7 @@ function iniciarCumpleanios() {
   const gradoPagina = document.body.dataset.grado;
   if (!gradoPagina) return;
 
-  fetch("../../shared/data/cumpleanios.json")
+  fetch("../shared/data/cumpleanios.json")
     .then(res => res.json())
     .then(data => {
 
