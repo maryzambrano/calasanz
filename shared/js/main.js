@@ -217,7 +217,7 @@ function abrirModalCumple(nombres) {
 
   if (!modal || !texto) return;
 
-  texto.innerHTML = `🎉 ${nombres}`;
+  texto.innerHTML = `${nombres}`;
 
   modal.style.display = "flex";
 
@@ -294,6 +294,5 @@ function lanzarGlobos() {
   }
 
 }
-
 
 
