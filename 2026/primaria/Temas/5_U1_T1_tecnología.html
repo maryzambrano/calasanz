@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Unidad 1 - Tema 1: La tecnología</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../shared/css/main.css">
+</head>
+
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="../5grado.html">
+            ← Volver
+        </a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section text-white d-flex align-items-center">
+    <div class="container text-center">
+        <h1 class="display-5 fw-bold">
+            Unidad 1
+        </h1>
+        <p class="lead">El Proceso tecnológico</p>
+    </div>
+</section>
+
+<!-- CONTENIDO -->
+<div class="container contenido-clase my-5">
+  <div class="row g-4">
+
+    <!-- ACTIVIDAD INTERACTIVA -->
+    <div class="col-12">
+      <div class="card recurso-card p-4">
+        <h3>🧠 Actividad: ¿Es tecnología?</h3>
+        <p>Marca si crees que cada objeto es tecnología y luego presiona verificar.
+        </p>
+        <table id="tablaTecnologia" class="table table-striped text-center">
+            <thead>
+              <tr>
+                <th>Objeto</th>
+                <th>Sí</th>
+                <th>No</th>
+                <th>Resultado</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr data-correct="si">
+                  <td>📱 Celular</td>
+                  <td><input type="radio" name="celular" value="si"></td>
+                  <td><input type="radio" name="celular" value="no"></td>
+                  <td class="resultado"></td>
+                </tr>   
+                <tr data-correct="si">
+                    <td>🌉 Puente</td>
+                    <td><input type="radio" name="puente" value="si"></td>
+                    <td><input type="radio" name="puente" value="no"></td>
+                    <td class="resultado"></td>
+                </tr>
+                <tr data-correct="no">
+                    <td>🌳 Árbol</td>
+                    <td><input type="radio" name="arbol" value="si"></td>
+                    <td><input type="radio" name="arbol" value="no"></td>
+                    <td class="resultado"></td>
+                </tr>
+                <tr data-correct="si">
+                    <td>✏️ Lápiz</td>
+                    <td><input type="radio" name="lapiz" value="si"></td>
+                    <td><input type="radio" name="lapiz" value="no"></td>
+                    <td class="resultado"></td>
+                </tr>
+                <tr data-correct="si">
+                    <td>💻 Computadora</td>
+                    <td><input type="radio" name="computadora" value="si"></td>
+                    <td><input type="radio" name="computadora" value="no"></td>
+                    <td class="resultado"></td>
+                </tr>
+                <tr data-correct="no">
+                    <td>⛰️ Montaña</td>
+                    <td><input type="radio" name="montana" value="si"></td>
+                    <td><input type="radio" name="montana" value="no"></td>
+                    <td class="resultado"></td>
+                </tr>
+                <tr data-correct="si">
+                    <td>🚲 Bicicleta</td>
+                    <td><input type="radio" name="bicicleta" value="si"></td>
+                    <td><input type="radio" name="bicicleta" value="no"></td>
+                    <td class="resultado"></td>
+                </tr>
+                <tr data-correct="si">
+                    <td>🏠 Casa</td>
+                    <td><input type="radio" name="casa" value="si"></td>
+                    <td><input type="radio" name="casa" value="no"></td>
+                    <td class="resultado"></td>
+                </tr>
+                <tr data-correct="no">
+                    <td>🌊 Río</td>
+                    <td><input type="radio" name="rio" value="si"></td>
+                    <td><input type="radio" name="rio" value="no"></td>
+                    <td class="resultado"></td>
+                </tr>
+                <tr data-correct="si">
+                    <td>🚦 Semáforo</td>
+                    <td><input type="radio" name="semaforo" value="si"></td>
+                    <td><input type="radio" name="semaforo" value="no"></td>
+                    <td class="resultado"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary mt-3" onclick="verificarRespuestas()">Verificar respuestas</button>
+
+      </div>
+    </div>
+
+    <!--DEFINICIÓN-->
+    <div class="col-12" id="cardDefinicion" style="display:none;">
+      <div class="card primaria-card p-4">
+        <h3>📚 ¿Qué es la tecnología?</h3>
+        <p>La <strong>tecnología</strong> es el conjunto de 
+        <strong>objetos, herramientas y sistemas</strong> que las personas crean
+        para <strong>resolver problemas y mejorar la vida cotidiana</strong>.</p>
+        <div class="alert alert-info">
+          Ejemplos de tecnología:
+          <ul>
+            <li>🏠 Casas</li>
+            <li>🌉 Puentes</li>
+            <li>🔧 Herramientas</li>
+            <li>🧺 Electrodomésticos</li>
+            <li>💻 Computadoras</li>
+            </ul>
+        </div>
+        <div class="text-center">
+          <p><strong>Piensen en situaciones dentro de una casa que podrían mejorarse con tecnología.</strong></p>
+          <img src="../../../shared/image/pensando.gif" class="img-fluid" alt="Pensando" width="30%">
+        </div>
+      </div> 
+    </div>
+
+    <!-- VIDEO -->
+    <div class="col-12">
+      <div class="card p-4">
+        <h3>🎬 Video: El proceso tecnológico</h3>
+        <div class="ratio ratio-16x9 mt-3">
+            <iframe 
+                src="https://www.youtube.com/embed/eGCkeh8B9D0"
+                title="Proceso tecnológico"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="text-center">
+          <br><br><p><strong>El esquema se resume así:</strong></p>
+          <img src="../../../shared/image/P5_UI_cierre.png" class="img-fluid" alt="Proceso tecnológico">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+function verificarRespuestas(){
+    const filas = document.querySelectorAll("#tablaTecnologia tbody tr");
+    filas.forEach(function(fila){
+        const correcta = fila.dataset.correct;
+        const seleccion = fila.querySelector("input[type=radio]:checked");
+        const resultado = fila.querySelector(".resultado");
+
+        if(!seleccion){
+            resultado.innerHTML = "⚪";
+            return;
+        }
+
+        if(seleccion.value === correcta){
+            resultado.innerHTML = "✔️";
+        }
+        else{
+            resultado.innerHTML = "❌";
+        }
+
+    });
+
+    // Mostrar la definición
+    document.getElementById("cardDefinicion").style.display = "block";
+
+}
+
+</script>
+
+</body>
+</html>
