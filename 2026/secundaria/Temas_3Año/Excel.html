@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tema 2 - Excel</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Estilos del sitio -->
+  <link rel="stylesheet" href="../../../shared/css/main.css">
+</head>
+
+<body data-grado="S3">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="../3año.html">← Volver</a>
+  </div>
+</nav>
+
+
+<!-- HEADER -->
+<section class="curso-header-primaria text-white text-center py-5">
+  <div class="container">
+    <h1 class="fw-bold">Microsoft Excel</h1>
+    <p class="lead">Primeros pasos</p>
+  </div>
+</section>
+
+
+<!-- INTRODUCCIÓN -->
+<section class="container py-5">
+
+  <div class="card shadow-sm">
+    <div class="card-body">
+
+      <h3 class="mb-3">💡 Introducción</h3>
+
+      <p>
+        <strong>Microsoft Excel</strong> es una aplicación de hoja de cálculo desarrollada por Microsoft que permite organizar, manipular, calcular y analizar datos numéricos y de texto. Utiliza una cuadrícula de celdas (filas y columnas) para crear tablas, fórmulas, gráficos y reportes, siendo fundamental para la contabilidad, finanzas y gestión de información. 
+      </p>
+
+      <p><strong>Características y usos clave de Excel:</strong></p>
+      <ul>
+        <li><strong>Organización de datos:</strong> Permite almacenar y organizar grandes cantidades de datos en tablas estructuradas.</li>
+        <li><strong>Fórmulas y funciones:</strong> Facilita el cálculo automático mediante fórmulas personalizadas y funciones predefinidas para realizar operaciones matemáticas, estadísticas, lógicas, entre otras.</li>
+        <li><strong>Gráficos y visualización:</strong> Ofrece herramientas para crear gráficos y visualizaciones que ayudan a interpretar los datos de manera más clara.</li>
+        <li><strong>Análisis de datos:</strong> Incluye funciones avanzadas para filtrar, ordenar y analizar datos, como tablas dinámicas y análisis de escenarios.</li>
+        <li><strong>Automatización:</strong> Permite automatizar tareas repetitivas mediante macros y programación en VBA (Visual Basic for Applications).</li>
+      </ul>
+      <p><strong>Interfaz de usuario:</strong></p>
+
+      <div class="text-center">
+          <img src="../../../shared/image/HojaDeCalculo.jpg" alt="Interfaz de Excel" class="img-fluid my-4">
+      </div>
+      
+        
+
+    </div>
+  </div>
+
+</section>
+
+<!-- HERRAMIENTAS BÁSICAS DE EXCEL  -->
+
+<section class="container py-5">
+
+  <div class="card shadow-sm">
+    <div class="card-body">
+
+      <h3 class="mb-3">🛠️ Herramientas básicas de Excel</h3>
+
+<p>El archivo principal de trabajo en Excel es el <strong>libro</strong>, está identificado con la extensión <strong>.xlsx</strong> y funciona como un contenedor para una o más hojas de cálculo.  La <strong>hoja de cálculo</strong> permite organizar, calcular y analizar datos de forma ordenada y eficiente; la cual está formada por 16.384 <strong>filas</strong> representadas por números (atajo de teclado para ir al final de una fila Ctrl+→) y 1.048.576 <strong>columnas</strong> representadas por letras (atajo de teclado para ir al final de una columna Ctrl+↓). 
+La intersección entre filas y columnas se llama <strong>celda</strong> (A1, B2, C10,...) y es la unidad básica de Excel donde se ingresan datos, fórmulas y funciones. Un conjunto de celdas se denomina <strong>rango</strong>, el cual se utiliza para aplicar formato o realizar cálculos. Se representa indicando la primera y la última celda, separadas por dos puntos (ejemplo A1:B10)</p>
+
+<p>Cuando trabajamos en una hoja de cálculo, el cursor se muestra como un puntero que cambia de forma según la acción que se puede realizar. Es importante familiarizarse con estos cambios para aprovechar al máximo las funcionalidades de Excel: </p>
+<p>➕ (cruz blanca gruesa): seleccionar celdas o rangos</p>
+<p>↔ (flechas horizontales): cambiar ancho de columna</p>
+<p>↕ (flechas verticales): cambiar alto de fila</p>
+<p>➕ pequeña (en la esquina de la celda): autorrelleno (copiar fórmulas o completar series)</p>
+<p>✥ (cuatro flechas): mover el contenido de una celda</p>
+
+<p>
+También podemos utilizar el menú contextual (clic derecho) para acceder a opciones rápidas como: insertar o eliminar filas/columnas, copiar, pegar, formatear celdas, entre otras.
+</p>
+
+<h3 class="mb-3">➕ Fórmulas y funciones</h3>
+
+<p>Una <strong>fórmula</strong> en Excel es una ecuación que realiza cálculos sobre los datos de una hoja de trabajo, como sumas, restas, multiplicaciones o divisiones. Siempre comienza con un signo igual (=) y puede incluir valores constantes, referencias a otras celdas, operadores aritméticos y funciones predefinidas. Ejemplo: <strong>=A1+A2</strong>, <strong>=B3*10%</strong>
+Al presionar Enter, la celda mostrará el resultado, pero la fórmula seguirá siendo visible en la barra de fórmulas superior. </p>
+
+<p>Una <strong>función</strong> en Excel es una fórmula predefinida y estructurada que realiza cálculos automáticos utilizando valores específicos, llamados argumentos, en un orden particular. Funcionan como atajos para tareas complejas,  facilitando el análisis de datos, ahorrando tiempo y reduciendo errores manuales en comparación con fórmulas manuales largas. Excel cuenta con más de 450 funciones categorizadas (matemáticas, estadísticas, lógicas, texto, búsqueda).  Ejemplos: <strong> =PROMEDIO(B1:B5)</strong>, <strong>=CONTAR(B1:B5)</strong></p>
+
+</div>
+  </div>
+
+</section>
+
+<!-- ACTIVIDAD: PRESUPUESTO -->
+<section class="container pb-5">
+
+  <div class="card shadow-sm">
+    <div class="card-body">
+
+      <h3 class="mb-4">💰 Ejercicio 1: Presupuesto</h3>
+
+      <p>
+        Elaboren un presupuesto siguiendo el modelo proporcionado. Para ello deberán:
+      </p>
+
+      <div class="text-center">
+          <img src="../../../shared/image/presupuestoModelo.jpg" alt="Interfaz de Excel" class="img-fluid my-4">
+      </div>
+
+      <ol>
+        <li>Ingresar <strong>5 productos</strong> con su <strong>precio unitario</strong> y <strong>cantidad</strong>.</li>
+        <li>Calcular automáticamente:
+          <ul>
+            <li><strong>Precio total</strong> por producto (precio unitario * cantidad).</li>
+            <li><strong>Subtotal</strong> de la compra.</li>
+            <li><strong>IVA del 21%</strong> aplicado sobre el subtotal.</li>
+            <li><strong>Descuento del 10%</strong> (si corresponde).</li>
+            <li><strong>Total a pagar</strong>.</li>
+          </ul>
+        </li>
+        <li>Insertar filas al inicio para crear un encabezado con:
+          <ul>
+            <li><strong>Nombre de la tienda</strong></li>
+            <li><strong>Título: “Presupuesto”</strong></li>
+            <li><strong>Fecha</strong></li>
+          </ul>
+        </li>
+        <li>Cambiar el nombre de la hoja a <strong>“Marzo”</strong>.</li>
+        <li>Guardar el libro con el nombre <strong>“Presupuesto”</strong>.</li>
+        <li>Subir el archivo a la <strong>carpeta de Drive</strong> correspondiente.</li>
+      </ol>
+
+      <div class="alert alert-warning mt-4">
+        <strong>Importante:</strong> Verifiquen que todas las fórmulas estén correctamente aplicadas
+        y que los valores se actualicen automáticamente al modificar cantidades o precios.
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center py-3">
+  <small>Informática - 3° Año</small>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
