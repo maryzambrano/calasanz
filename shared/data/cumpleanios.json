@@ -115,9 +115,9 @@
   },
   {
     "grado": "S2",
-    "nombre": "Victoria Pedernera",
-    "dia": 12,
-    "mes": 5
+    "nombre": "León  Manes",
+    "dia": 9,
+    "mes": 12
   },
   {
     "grado": "S2",
@@ -541,7 +541,7 @@
   },
   {
     "grado": "S2",
-    "nombre": "Tiziano Avila",
+    "nombre": "TIziano Avila",
     "dia": 12,
     "mes": 9
   },
@@ -1231,9 +1231,9 @@
   },
   {
     "grado": "S1",
-    "nombre": "Julieta De Feo",
-    "dia": 26,
-    "mes": 5
+    "nombre": "Julieta coria",
+    "dia": 7,
+    "mes": 8
   },
   {
     "grado": "S1",
@@ -1516,5 +1516,89 @@
     "nombre": "Agustina  Di Guilmi ",
     "dia": 27,
     "mes": 12
+  },
+  {
+    "grado": "S1",
+    "nombre": "Thiago Herreros",
+    "dia": 8,
+    "mes": 9
+  },
+  {
+    "grado": "S1",
+    "nombre": "Valentina Alario",
+    "dia": 17,
+    "mes": 11
+  },
+  {
+    "grado": "S1",
+    "nombre": "Franco Garabaglia",
+    "dia": 27,
+    "mes": 9
+  },
+  {
+    "grado": "S1",
+    "nombre": "Ramiro Walter",
+    "dia": 15,
+    "mes": 5
+  },
+  {
+    "grado": "S1",
+    "nombre": "María Inés Perego",
+    "dia": 17,
+    "mes": 10
+  },
+  {
+    "grado": "S1",
+    "nombre": "Ciro Lestingi",
+    "dia": 12,
+    "mes": 10
+  },
+  {
+    "grado": "S2",
+    "nombre": "Bautista peralta",
+    "dia": 18,
+    "mes": 12
+  },
+  {
+    "grado": "S2",
+    "nombre": "Sol  García Moral",
+    "dia": 31,
+    "mes": 10
+  },
+  {
+    "grado": "S2",
+    "nombre": "Santiago Nuñez",
+    "dia": 10,
+    "mes": 6
+  },
+  {
+    "grado": "S2",
+    "nombre": "Bautista  Crosa",
+    "dia": 14,
+    "mes": 12
+  },
+  {
+    "grado": "S1",
+    "nombre": "Pedro Feruglio",
+    "dia": 30,
+    "mes": 12
+  },
+  {
+    "grado": "S1",
+    "nombre": "Arabella Estaba",
+    "dia": 17,
+    "mes": 12
+  },
+  {
+    "grado": "S2",
+    "nombre": "Macarena Sofía  Coto Pose",
+    "dia": 5,
+    "mes": 7
+  },
+  {
+    "grado": "S1",
+    "nombre": "Luana Vazquez",
+    "dia": 28,
+    "mes": 11
   }
 ]
