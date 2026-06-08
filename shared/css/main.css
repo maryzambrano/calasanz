@@ -359,3 +359,9 @@ TEMAS
 max-width:900px;
 margin:auto;
 }
+
+.modelo-rasti{
+    height:220px;
+    width:100%;
+    object-fit:contain;
+}
