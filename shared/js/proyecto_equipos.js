@@ -56,7 +56,7 @@ const datosEquipos = [
     {c:"3H",n:8,a:"Alloni Guadalupe; Cirilo Navarro Thiago Julian",r:"https://github.com/milanesit/proyecto",p:"https://milanesit.github.io/proyecto/"},
     {c:"3H",n:9,a:"Abel Nicolas Alejandro; Vilaboa Tadeo",r:"https://github.com/Vilabel/Proyecto",p:"https://vilabel.github.io/proyecto/index.html"},
     {c:"3H",n:10,a:"Gargiulo Agustina Pilar; Haslop Luz María",r:"https://github.com/gargiulo-haslop/Proyecto-integrador",p:"https://gargiulo-haslop.github.io/Proyecto-integrador/"},
-    {c:"3H",n:11,a:"Bellizzi Dante; Prieto Juan Ignacio",r:"https://github.com/prieto-bellizzi/informatica",p:"https://humanidades2026.github.io/Protecto/"},
+    {c:"3H",n:11,a:"Bellizzi Dante; Prieto Juan Ignacio",r:"https://github.com/Humanidades2026/Protecto",p:"https://humanidades2026.github.io/Protecto/"},
     {c:"3H",n:12,a:"Bruzzese Tomás; Degdeg Facundo",r:"https://github.com/tomasbruzzese/proyecto",p:"https://tomasbruzzese.github.io/proyecto/"},
     {c:"3H",n:13,a:"Gamarra Emanuel; Villafuerte Mick",r:"https://github.com/mickmoscoso/proyecto",p:"https://mickmoscoso.github.io/proyecto/index.html"},
     {c:"3H",n:14,a:"Crivelli Juan Ignacio; Molina Thiago",r:"https://github.com/Crivelli-Molina/proyecto.git",p:"https://crivelli-molina.github.io/proyecto/"},
