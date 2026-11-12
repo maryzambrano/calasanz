@@ -46,7 +46,7 @@ const datosEquipos = [
     {c:"3C",n:20,a:"Gopar Julia; Porta Milagros",r:"https://github.com/juliamilagros/proyecto.git",p:"https://juliamilagros.github.io/proyecto/"},
 
     // 3.º H
-    {c:"3H",n:1,a:"Catalán Victoria; Jafelle Rossi Jazmín",r:"https://github.com/jjafellerossi-cpu/proyecto",p:""},
+    {c:"3H",n:1,a:"Catalán Victoria; Jafelle Rossi Jazmín",r:"https://github.com/jjafellerossi-cpu/proyecto",p:"https://jjafellerossi-cpu.github.io/proyecto/"},
     {c:"3H",n:2,a:"Jimenez Abril; Mastrangelo Enzo",r:"",p:""},
     {c:"3H",n:3,a:"Cabaleiro Infante Matías; Hernández Calbá Nicolás",r:"https://github.com/MatiasHer91218/proyecto",p:"https://matiasher91218.github.io/proyecto/"},
     {c:"3H",n:4,a:"Chen Matias; Montero Facundo",r:"https://github.com/matiasignaciochen-hub/proyecto.git",p:"https://matiasignaciochen-hub.github.io/proyecto/"},
