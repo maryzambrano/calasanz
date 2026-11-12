@@ -25,7 +25,7 @@ const personajes = [
 const datosEquipos = [
     // 3.º C
     {c:"3C",n:1,a:"Cetrángolo Luna Juan Martín; Tejada Mohsen Bautista",r:"https://github.com/jmcetraluna-stack/Proyectos",p:"https://jmcetraluna-stack.github.io/Proyectos/"},
-    {c:"3C",n:2,a:"Chierico Francisco; Rodriguez Valentino",r:"https://github.com/Equipo4Informatica3C/Proyecto",p:""},
+    {c:"3C",n:2,a:"Chierico Francisco; Rodriguez Valentino",r:"https://github.com/Equipo4Informatica3C/Proyecto",p:"https://equipo4informatica3c.github.io/Proyecto/"},
     {c:"3C",n:3,a:"Kolada Arata Olivia; Perez Toselli Delfina",r:"https://github.com/delfiyoli/proyecto.git",p:"https://delfiyoli.github.io/proyecto/"},
     {c:"3C",n:4,a:"Argnani Santino; Ferrara Lucio",r:"https://github.com/lucioferrara23/Proyecto",p:"https://lucioferrara23.github.io/Proyecto/"},
     {c:"3C",n:5,a:"González Abril; Zambrano Panezo Camila Alejandra",r:"https://github.com/Camila1Abril/Proyecto",p:"https://camila1abril.github.io/Proyecto/"},
