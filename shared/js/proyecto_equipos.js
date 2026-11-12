@@ -51,7 +51,7 @@ const datosEquipos = [
     {c:"3H",n:3,a:"Cabaleiro Infante Matías; Hernández Calbá Nicolás",r:"https://github.com/MatiasHer91218/proyecto",p:"https://matiasher91218.github.io/proyecto/"},
     {c:"3H",n:4,a:"Chen Matias; Montero Facundo",r:"https://github.com/matiasignaciochen-hub/proyecto.git",p:"https://matiasignaciochen-hub.github.io/proyecto/"},
     {c:"3H",n:5,a:"Amato Santino; Gandolfo Ignacio",r:"https://github.com/Santiynacho/proyecto./",p:"https://santiynacho.github.io/proyecto./"},
-    {c:"3H",n:6,a:"Blanco Lola; Picciuolo Constanza",r:"https://github.com/Coniylola/proyecto",p:"https://coniylola.github.io/proyecto/"},
+    {c:"3H",n:6,a:"Blanco Lola; Picciuolo Constanza",r:"https://github.com/Coniylola/proyecto2",p:"https://coniylola.github.io/proyecto2/"},
     {c:"3H",n:7,a:"Maguiña Hilario Ayelén Milagros; Niño Halabe Farid",r:"https://github.com/fninohalabe-ctrl/proyecto",p:"https://fninohalabe-ctrl.github.io/proyecto/"},
     {c:"3H",n:8,a:"Alloni Guadalupe; Cirilo Navarro Thiago Julian",r:"https://github.com/milanesit/proyecto",p:"https://milanesit.github.io/proyecto/"},
     {c:"3H",n:9,a:"Abel Nicolas Alejandro; Vilaboa Tadeo",r:"https://github.com/Vilabel/Proyecto",p:"https://vilabel.github.io/proyecto/index.html"},
